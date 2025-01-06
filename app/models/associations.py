@@ -1,4 +1,5 @@
-from app import db
+from app.app import db
+
 
 class BatchStudents(db.Model):
     __tablename__ = 'batch_students'
