@@ -2,6 +2,8 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flasgger import Swagger
+import os
+from dotenv import load_dotenv
 
 
 
@@ -13,7 +15,7 @@ def create_app():
     app = Flask(__name__)
 
     # MySQL Database Configuration
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Mysql%40root4@localhost/edutrack'
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     # Initialize extensions
