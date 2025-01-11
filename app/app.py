@@ -14,6 +14,12 @@ migrate = Migrate()
 def create_app():
     app = Flask(__name__)
 
+    load_dotenv()
+
+    database_uri = os.getenv('DATABASE_URI')
+    if not database_uri:
+        raise ValueError("DATABASE_URI not set in environment variables")
+
     # MySQL Database Configuration
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
