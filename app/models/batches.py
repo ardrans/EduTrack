@@ -1,4 +1,4 @@
-from app.app import db
+from app.models import db
 
 
 class Batches(db.Model):
@@ -13,7 +13,7 @@ class Batches(db.Model):
 
     students = db.relationship('BatchStudents', back_populates='batch')
     trainer = db.relationship('Users', backref='batches_trained')
-    course = db.relationship('Courses', backref='batches')
+    course = db.relationship('Courses', backref='course_batches')
 
     def __repr__(self):
         return f"<Batch {self.name}>"

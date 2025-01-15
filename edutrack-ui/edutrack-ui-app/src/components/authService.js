@@ -1,17 +1,18 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000'; // Change this to your Flask API URL
+const API_URL = 'http://localhost:5000';
 
 export const loginUser = async (email, password) => {
     try {
         const response = await axios.post(`${API_URL}/auth/users/login`, { email, password });
-        localStorage.setItem('token', response.data.token); // Save token in local storage
+        localStorage.setItem('token', response.data.token);
         return response.data;
     } catch (error) {
         console.error('Login failed:', error);
         throw error;
     }
 };
+
 
 export const registerUser = async (data) => {
     try {
@@ -34,6 +35,16 @@ export const createUserWithRole = async (data) => {
         return response.data;
     } catch (error) {
         console.error('Error creating user:', error);
+        throw error;
+    }
+};
+
+export const addRole = async (roleName) => {
+    try {
+        const response = await axios.post(`${API_URL}/auth/roles`, { name: roleName });
+        return response.data;
+    } catch (error) {
+        console.error('Error adding role:', error);
         throw error;
     }
 };

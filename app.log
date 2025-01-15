@@ -1,0 +1,630 @@
+2025-01-13 20:31:49,233 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'trainer'}
+2025-01-13 20:31:49,250 - app.services.auth_services - ERROR - Error creating role: Error creating backref 'batches' on relationship 'Batches.course': property of that name exists on mapper 'Mapper[Courses(courses)]'
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 145, in create_role
+    new_role = Roles(
+               ^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 566, in _initialize_instance
+    manager.dispatch.init(self, args, kwargs)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/event/attr.py", line 497, in __call__
+    fn(*args, **kw)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 4407, in _event_on_init
+    instrumenting_mapper._check_configure()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 2399, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 4215, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 4256, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 2416, in _post_configure_properties
+    prop.init()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/interfaces.py", line 589, in init
+    self.do_init()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/relationships.py", line 1647, in do_init
+    self._generate_backref()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/relationships.py", line 2075, in _generate_backref
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Error creating backref 'batches' on relationship 'Batches.course': property of that name exists on mapper 'Mapper[Courses(courses)]'
+2025-01-14 14:09:16,549 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'trainer'}
+2025-01-14 14:09:16,559 - app.services.auth_services - ERROR - Error creating role: Error creating backref 'batches' on relationship 'Batches.course': property of that name exists on mapper 'Mapper[Courses(courses)]'
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 145, in create_role
+    new_role = Roles(
+               ^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 566, in _initialize_instance
+    manager.dispatch.init(self, args, kwargs)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/event/attr.py", line 497, in __call__
+    fn(*args, **kw)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 4407, in _event_on_init
+    instrumenting_mapper._check_configure()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 2399, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 4215, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 4256, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 2416, in _post_configure_properties
+    prop.init()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/interfaces.py", line 589, in init
+    self.do_init()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/relationships.py", line 1647, in do_init
+    self._generate_backref()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/relationships.py", line 2075, in _generate_backref
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Error creating backref 'batches' on relationship 'Batches.course': property of that name exists on mapper 'Mapper[Courses(courses)]'
+2025-01-14 14:15:03,651 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'trainer'}
+2025-01-14 14:15:03,683 - app.services.auth_services - ERROR - Error creating role: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 149, in create_role
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 68, in save_obj
+    ) in _organize_states_for_save(base_mapper, states, uowtransaction):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 223, in _organize_states_for_save
+    for state, dict_, mapper, connection in _connections_for_states(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1753, in _connections_for_states
+    connection = uowtransaction.transaction.connection(base_mapper)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in connection
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1038, in connection
+    bind = self.session.get_bind(bindkey, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/session.py", line 53, in get_bind
+    engines = self._db.engines
+              ^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/extension.py", line 690, in engines
+    raise RuntimeError(
+RuntimeError: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2025-01-14 14:18:47,220 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'trainer'}
+2025-01-14 14:18:47,249 - app.services.auth_services - ERROR - Error creating role: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 149, in create_role
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 68, in save_obj
+    ) in _organize_states_for_save(base_mapper, states, uowtransaction):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 223, in _organize_states_for_save
+    for state, dict_, mapper, connection in _connections_for_states(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1753, in _connections_for_states
+    connection = uowtransaction.transaction.connection(base_mapper)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in connection
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1038, in connection
+    bind = self.session.get_bind(bindkey, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/session.py", line 53, in get_bind
+    engines = self._db.engines
+              ^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/extension.py", line 690, in engines
+    raise RuntimeError(
+RuntimeError: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2025-01-14 14:18:52,614 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'trainer'}
+2025-01-14 14:18:52,616 - app.services.auth_services - ERROR - Error creating role: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 149, in create_role
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 68, in save_obj
+    ) in _organize_states_for_save(base_mapper, states, uowtransaction):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 223, in _organize_states_for_save
+    for state, dict_, mapper, connection in _connections_for_states(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1753, in _connections_for_states
+    connection = uowtransaction.transaction.connection(base_mapper)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in connection
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1038, in connection
+    bind = self.session.get_bind(bindkey, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/session.py", line 53, in get_bind
+    engines = self._db.engines
+              ^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/extension.py", line 690, in engines
+    raise RuntimeError(
+RuntimeError: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2025-01-14 14:35:56,313 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'trainer'}
+2025-01-14 14:35:56,353 - app.services.auth_services - ERROR - Error creating role: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 149, in create_role
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 68, in save_obj
+    ) in _organize_states_for_save(base_mapper, states, uowtransaction):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 223, in _organize_states_for_save
+    for state, dict_, mapper, connection in _connections_for_states(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1753, in _connections_for_states
+    connection = uowtransaction.transaction.connection(base_mapper)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in connection
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1038, in connection
+    bind = self.session.get_bind(bindkey, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/session.py", line 53, in get_bind
+    engines = self._db.engines
+              ^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/extension.py", line 690, in engines
+    raise RuntimeError(
+RuntimeError: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2025-01-14 15:13:45,132 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'trainer'}
+2025-01-14 15:13:45,162 - app.services.auth_services - ERROR - Error creating role: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 149, in create_role
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 68, in save_obj
+    ) in _organize_states_for_save(base_mapper, states, uowtransaction):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 223, in _organize_states_for_save
+    for state, dict_, mapper, connection in _connections_for_states(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1753, in _connections_for_states
+    connection = uowtransaction.transaction.connection(base_mapper)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in connection
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1038, in connection
+    bind = self.session.get_bind(bindkey, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/session.py", line 53, in get_bind
+    engines = self._db.engines
+              ^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/extension.py", line 690, in engines
+    raise RuntimeError(
+RuntimeError: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2025-01-14 20:10:45,418 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'trainer'}
+2025-01-14 20:10:45,447 - app.services.auth_services - ERROR - Error creating role: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 149, in create_role
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 68, in save_obj
+    ) in _organize_states_for_save(base_mapper, states, uowtransaction):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 223, in _organize_states_for_save
+    for state, dict_, mapper, connection in _connections_for_states(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1753, in _connections_for_states
+    connection = uowtransaction.transaction.connection(base_mapper)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in connection
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1038, in connection
+    bind = self.session.get_bind(bindkey, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/session.py", line 53, in get_bind
+    engines = self._db.engines
+              ^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/extension.py", line 690, in engines
+    raise RuntimeError(
+RuntimeError: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2025-01-14 21:25:18,988 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'trainer'}
+2025-01-14 21:25:19,019 - app.services.auth_services - ERROR - Error creating role: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 149, in create_role
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 68, in save_obj
+    ) in _organize_states_for_save(base_mapper, states, uowtransaction):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 223, in _organize_states_for_save
+    for state, dict_, mapper, connection in _connections_for_states(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1753, in _connections_for_states
+    connection = uowtransaction.transaction.connection(base_mapper)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in connection
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1038, in connection
+    bind = self.session.get_bind(bindkey, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/session.py", line 53, in get_bind
+    engines = self._db.engines
+              ^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/extension.py", line 690, in engines
+    raise RuntimeError(
+RuntimeError: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2025-01-15 14:13:04,632 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'trainer'}
+2025-01-15 14:13:04,700 - app.services.auth_services - ERROR - Error creating role: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 149, in create_role
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 68, in save_obj
+    ) in _organize_states_for_save(base_mapper, states, uowtransaction):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 223, in _organize_states_for_save
+    for state, dict_, mapper, connection in _connections_for_states(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1753, in _connections_for_states
+    connection = uowtransaction.transaction.connection(base_mapper)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in connection
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1038, in connection
+    bind = self.session.get_bind(bindkey, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/session.py", line 53, in get_bind
+    engines = self._db.engines
+              ^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask_sqlalchemy/extension.py", line 690, in engines
+    raise RuntimeError(
+RuntimeError: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2025-01-15 14:47:49,350 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'trainer'}
+2025-01-15 14:47:49,490 - app.services.auth_services - INFO - Role created successfully: <Roles 1>
+2025-01-15 14:48:44,428 - app.services.auth_services - INFO - Creating a new user with data: {'name': 'ardra', 'email': 'nsardra@hmail.com', 'password': 'ff', 'role_id': '1'}
+2025-01-15 14:48:44,543 - app.services.auth_services - ERROR - Error creating user: (pymysql.err.DataError) (1406, "Data too long for column 'password_hash' at row 1")
+[SQL: INSERT INTO users (name, email, password_hash, role_id) VALUES (%(name)s, %(email)s, %(password_hash)s, %(role_id)s)]
+[parameters: {'name': 'ardra', 'email': 'nsardra@hmail.com', 'password_hash': 'scrypt:32768:8:1$5elbeAMfQg0HNB49$4e8bfa22941157d1e55e075d8bafd73b64217440f374bd768d6b40bc61994a0a0cebf359ece62bc226adb1c88e0b616dcd1c691b9edb3731108c61371990e6da', 'role_id': '1'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'password_hash' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 35, in create_user
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.DataError: (pymysql.err.DataError) (1406, "Data too long for column 'password_hash' at row 1")
+[SQL: INSERT INTO users (name, email, password_hash, role_id) VALUES (%(name)s, %(email)s, %(password_hash)s, %(role_id)s)]
+[parameters: {'name': 'ardra', 'email': 'nsardra@hmail.com', 'password_hash': 'scrypt:32768:8:1$5elbeAMfQg0HNB49$4e8bfa22941157d1e55e075d8bafd73b64217440f374bd768d6b40bc61994a0a0cebf359ece62bc226adb1c88e0b616dcd1c691b9edb3731108c61371990e6da', 'role_id': '1'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-01-15 14:52:40,872 - app.services.auth_services - INFO - Creating a new user with data: {'name': 'ardra', 'email': 'nsardra@hmail.com', 'password': 'dd', 'role_id': '1'}
+2025-01-15 14:52:41,009 - app.services.auth_services - INFO - User created successfully: <Users 1>

@@ -1,4 +1,4 @@
-from app.app import db
+from app.models import db
 
 
 class Courses(db.Model):
@@ -10,7 +10,7 @@ class Courses(db.Model):
     duration = db.Column(db.Integer)  # Duration in hours
 
     topics = db.relationship('Topics', back_populates='course')
-    batches = db.relationship('Batches', backref='course')
+    batches = db.relationship('Batches', backref='course_ref')
 
     def __repr__(self):
         return f"<Course {self.name}>"

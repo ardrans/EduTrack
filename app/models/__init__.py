@@ -1,7 +1,11 @@
-from app.models.users import Users,Roles
-from app.models.batches import Batches
-from app.models.courses import Courses,Topics
-from app.models.associations import BatchStudents
-from app.models.students import Students
+from flask_sqlalchemy import SQLAlchemy
 
-# Add more models here as needed
+# Initialize the db here
+db = SQLAlchemy()
+
+# Import models inside a function or after db is initialized
+from .users import Users, Roles
+from .batches import Batches
+from .courses import Courses, Topics
+from .associations import BatchStudents
+from .students import Students

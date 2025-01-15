@@ -4,50 +4,56 @@ from flask_migrate import Migrate
 from flasgger import Swagger
 import os
 from dotenv import load_dotenv
+from flask_cors import CORS
+from app.models import db  # Import the `db` instance from models
 
-
-
-# Initialize SQLAlchemy and Flask-Migrate
-db = SQLAlchemy()
+# Initialize extensions
 migrate = Migrate()
+
 
 def create_app():
     app = Flask(__name__)
 
+    # Load environment variables
     load_dotenv()
 
-    database_uri = os.getenv('DATABASE_URI')
-    if not database_uri:
-        raise ValueError("DATABASE_URI not set in environment variables")
-
-    # MySQL Database Configuration
+    # Database configuration
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+    # Enable Cross-Origin Resource Sharing
+    CORS(app, resources={r"/*": {
+        "origins": "http://localhost:3000",  # Frontend origin
+        "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization"],
+        "supports_credentials": True
+    }})
 
     # Initialize extensions
     db.init_app(app)
     migrate.init_app(app, db)
+    Swagger(app)
 
-    swagger = Swagger(app)
-    # Import your route blueprints
+    # Import blueprints after app and db initialization
+    with app.app_context():
+        from app.routes.auth_route import auth_routes
+        from app.routes.batch_route import batch_routes
+        from app.routes.topic_route import topic_routes
+        from app.routes.course_route import course_routes
+        from app.routes.student_route import student_routes
 
-    from app.routes.auth_route import auth_routes
-    from app.routes.batch_route import batch_routes
-    from app.routes.topic_route import topic_routes
-    from app.routes.course_route import course_routes
-    from app.routes.student_route import student_routes
-
-
-    # Register route blueprints directly with prefixes
-    app.register_blueprint(auth_routes, url_prefix='/auth')  # Auth routes
-    app.register_blueprint(batch_routes, url_prefix='/users')  # Batch routes
-    app.register_blueprint(topic_routes, url_prefix='/topics')  # Topic routes
-    app.register_blueprint(course_routes, url_prefix='/courses')  # Course routes
-    app.register_blueprint(student_routes, url_prefix='/students')  # Student routes
+        # Register blueprints
+        app.register_blueprint(auth_routes, url_prefix='/auth')
+        app.register_blueprint(batch_routes, url_prefix='/users')
+        app.register_blueprint(topic_routes, url_prefix='/topics')
+        app.register_blueprint(course_routes, url_prefix='/courses')
+        app.register_blueprint(student_routes, url_prefix='/students')
 
     return app
 
-if __name__ == "__main__":
-    app = create_app()  # Create the Flask app instance
-    app.run(debug=True)  # Run the app in debug mode
 
+# Create the app instance globally accessible
+app = create_app()
+
+if __name__ == "__main__":
+    app.run(debug=True)

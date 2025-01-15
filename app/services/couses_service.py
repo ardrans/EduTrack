@@ -1,5 +1,5 @@
 from flask import jsonify
-from app.app import db
+from app.models import db
 from app.models import Courses
 from app.auth_utils import token_required
 from ..logging__config import init_logger

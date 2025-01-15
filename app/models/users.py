@@ -1,4 +1,4 @@
-from app.app import db
+from app.models import db
 from werkzeug.security import generate_password_hash, check_password_hash
 
 class Users(db.Model):
@@ -7,7 +7,7 @@ class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password_hash = db.Column(db.String(128))
+    password_hash = db.Column(db.String(255))  # Increased length to 255
 
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
 

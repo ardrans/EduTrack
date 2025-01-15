@@ -1,5 +1,5 @@
 from flask import jsonify
-from app.app import db
+from app.models import db
 from app.models import Students
 from app.auth_utils import token_required
 from ..logging__config import init_logger
@@ -33,7 +33,6 @@ class StudentService:
             logger.error("Error creating student: %s", str(e), exc_info=True)
             db.session.rollback()
             return jsonify({"error": str(e)}), 400
-
     @staticmethod
     @token_required
     def get_students():

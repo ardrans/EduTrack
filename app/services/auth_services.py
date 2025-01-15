@@ -2,7 +2,7 @@ import jwt
 import datetime
 from flask import jsonify, request, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
-from ..app import db
+from app.models import db
 from app.models import Users, Roles
 from ..logging__config import init_logger
 from datetime import datetime, timezone
