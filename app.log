@@ -628,3 +628,137 @@ sqlalchemy.exc.DataError: (pymysql.err.DataError) (1406, "Data too long for colu
 (Background on this error at: https://sqlalche.me/e/20/9h9h)
 2025-01-15 14:52:40,872 - app.services.auth_services - INFO - Creating a new user with data: {'name': 'ardra', 'email': 'nsardra@hmail.com', 'password': 'dd', 'role_id': '1'}
 2025-01-15 14:52:41,009 - app.services.auth_services - INFO - User created successfully: <Users 1>
+2025-01-18 09:12:59,645 - app.services.auth_services - INFO - Creating a new user with data: {'name': 'aaa', 'email': 'nsardra@dmail.com', 'password': 'ee', 'role_id': '1'}
+2025-01-18 09:12:59,822 - app.services.auth_services - INFO - User created successfully: <Users 2>
+2025-01-18 09:40:58,550 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hmail.com
+2025-01-18 09:40:58,683 - app.services.auth_services - WARNING - Invalid credentials for user with email: nsardra@hmail.com
+2025-01-18 09:41:36,327 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-18 09:45:22,508 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-18 10:08:47,720 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-18 10:08:47,918 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-18 21:11:22,000 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-18 21:11:22,130 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-18 21:12:40,681 - app.services.auth_services - INFO - Creating a new user with data: {'name': 'sss', 'email': 'nsardsasra@dmail.com', 'password': 'ww', 'role_id': 'trainer'}
+2025-01-18 21:12:40,794 - app.services.auth_services - ERROR - Error creating user: (pymysql.err.DataError) (1366, "Incorrect integer value: 'trainer' for column 'role_id' at row 1")
+[SQL: INSERT INTO users (name, email, password_hash, role_id) VALUES (%(name)s, %(email)s, %(password_hash)s, %(role_id)s)]
+[parameters: {'name': 'sss', 'email': 'nsardsasra@dmail.com', 'password_hash': 'scrypt:32768:8:1$ZoHYXF9x1j0UIGEa$41359ba894ff47554096701f51d0d212383a9d5ab3f14435f065fdb72a3c2a1e64cd9484d9c4e785eb8f921f4ed498be3fb2d75e8812e011e1c034c9fd54f5e2', 'role_id': 'trainer'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1366, "Incorrect integer value: 'trainer' for column 'role_id' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 35, in create_user
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.DataError: (pymysql.err.DataError) (1366, "Incorrect integer value: 'trainer' for column 'role_id' at row 1")
+[SQL: INSERT INTO users (name, email, password_hash, role_id) VALUES (%(name)s, %(email)s, %(password_hash)s, %(role_id)s)]
+[parameters: {'name': 'sss', 'email': 'nsardsasra@dmail.com', 'password_hash': 'scrypt:32768:8:1$ZoHYXF9x1j0UIGEa$41359ba894ff47554096701f51d0d212383a9d5ab3f14435f065fdb72a3c2a1e64cd9484d9c4e785eb8f921f4ed498be3fb2d75e8812e011e1c034c9fd54f5e2', 'role_id': 'trainer'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-01-18 21:27:12,626 - app.services.student_services - INFO - Fetching all students
+2025-01-18 21:27:12,668 - app.services.student_services - INFO - Fetched 0 students
+2025-01-18 21:27:20,974 - app.services.student_services - INFO - Fetching all students
+2025-01-18 21:27:20,977 - app.services.student_services - INFO - Fetching all students
+2025-01-18 21:27:20,979 - app.services.student_services - INFO - Fetched 0 students
+2025-01-18 21:27:20,981 - app.services.student_services - INFO - Fetched 0 students
+2025-01-18 21:27:36,965 - app.services.student_services - INFO - Attempting to create a new student with data: {'name': 'stud1', 'email': 'nsardwwrhhha@gmail.com', 'phone': '422', 'profile_picture': 'aa'}
+2025-01-18 21:27:36,987 - app.services.student_services - INFO - Student created successfully with ID: 1
+2025-01-18 21:27:36,996 - app.services.student_services - INFO - Fetching all students
+2025-01-18 21:27:36,999 - app.services.student_services - INFO - Fetched 1 students

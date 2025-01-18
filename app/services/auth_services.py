@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from app.models import db
 from app.models import Users, Roles
 from ..logging__config import init_logger
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from functools import wraps
 
 # Set up the logger for this module
@@ -125,7 +125,7 @@ class UserService:
     def generate_jwt(user):
         payload = {
             'user_id': user.id,
-            'exp': datetime.datetime.now(timezone.utc) + datetime.timedelta(hours=1)
+            'exp': datetime.now(timezone.utc) + timedelta(hours=1)  # Use imported `datetime` directly
         }
         token = jwt.encode(payload, SECRET_KEY, algorithm='HS256')
         return token

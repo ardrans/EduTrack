@@ -92,3 +92,4 @@ class CourseService:
             logger.error("Error deleting course with ID %s: %s", course_id, str(e), exc_info=True)
             db.session.rollback()
             return jsonify({"error": str(e)}), 400
+
