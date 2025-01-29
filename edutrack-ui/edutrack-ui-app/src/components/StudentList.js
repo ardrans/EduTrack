@@ -31,6 +31,7 @@ const StudentList = ({ students, onEdit, onDelete }) => (
                     <td>
                         <button onClick={() => onEdit(student)}>Edit</button>
                         <button onClick={() => onDelete(student.id)}>Delete</button>
+
                     </td>
                 </tr>
             ))}

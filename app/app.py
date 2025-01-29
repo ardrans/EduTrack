@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, g
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flasgger import Swagger
@@ -6,6 +6,7 @@ import os
 from dotenv import load_dotenv
 from flask_cors import CORS
 from app.models import db  # Import the `db` instance from models
+from .auth_utils import get_logged_in_user_from_token
 
 # Initialize extensions
 migrate = Migrate()
@@ -33,6 +34,14 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app, db)
     Swagger(app)
+
+    # Register the before_request function to load user info
+    @app.before_request
+    def load_user():
+        """
+        Load the logged-in user before each request, if authenticated.
+        """
+        g.user = get_logged_in_user_from_token()  # Replace with your logic to get the user (e.g., from the request token)
 
     # Import blueprints after app and db initialization
     with app.app_context():

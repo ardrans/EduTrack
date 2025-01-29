@@ -1,72 +1,71 @@
-import React, { useState, useEffect } from 'react';
-import { createUserWithRole } from './authService';
+import React, { useContext } from 'react';
+import { Container, Nav } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
+import AuthContext from './AuthContext';
 
-const Dashboard = () => {
-    const [users, setUsers] = useState([]);
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [role, setRole] = useState('');
+function Dashboard() {
+  const { user, handleLogout } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        // Fetch existing users (you can implement this API in Flask backend)
-    }, []);
+  const handleLogoutClick = () => {
+    handleLogout();
+    navigate('/login');
+  };
 
-    const handleAddUser = async (e) => {
-        e.preventDefault();
-        try {
-            const data = { name, email, password, role_id: role };
-            const response = await createUserWithRole(data);
-            if (response && response.user) {
-                setUsers([...users, response.user]);
-            }
-        } catch (error) {
-            console.error('Error adding user:', error);
-        }
-    };
+  const sidebarStyle = {
+    height: '100vh',
+    position: 'fixed',
+    backgroundColor: '#343a40',
+    color: '#fff',
+    padding: '20px',
+    width: '250px',
+  };
 
-    return (
-        <div>
-            <h2>Admin Dashboard</h2>
-            <h3>Add User</h3>
-            <form onSubmit={handleAddUser}>
-                <input
-                    type="text"
-                    placeholder="Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                />
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <input
-                    type="text"
-                    placeholder="Role"
-                    value={role}
-                    onChange={(e) => setRole(e.target.value)}
-                />
-                <button type="submit">Add User</button>
-            </form>
+  const contentStyle = {
+    marginLeft: '270px',
+    padding: '20px',
+    textAlign: 'center',
+  };
 
-            <h3>Users</h3>
-            <ul>
-                {users.map((user) => (
-                    <li key={user.id}>
-                        {user.name} - {user.email} - {user.role_id}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-};
+  const navLinkStyle = {
+    color: '#fff',
+    textDecoration: 'none',
+    margin: '10px 0',
+    display: 'block',
+  };
+
+  return (
+    <div>
+      {/* Sidebar Navigation */}
+      <div style={sidebarStyle}>
+        <h3 className="text-center">EduTrack</h3>
+        <Nav className="flex-column">
+          <Link to="/" style={navLinkStyle}>Home</Link>
+          {user?.role === 'hr' && (
+            <>
+              <Link to="/studentmanagement" style={navLinkStyle}>Student Management</Link>
+              <Link to="/addrole" style={navLinkStyle}>Add Role</Link>
+              <Link to="/register" style={navLinkStyle}>Register</Link>
+            </>
+          )}
+          <Link to="/dashboard" style={navLinkStyle}>Dashboard</Link>
+          <button
+            className="btn btn-danger mt-3"
+            onClick={handleLogoutClick}
+            style={{ width: '100%' }}
+          >
+            Logout
+          </button>
+        </Nav>
+      </div>
+
+      {/* Main Content */}
+      <div style={contentStyle}>
+        <h1>Welcome to EduTrack</h1>
+        <p>Your centralized platform for managing educational activities.</p>
+      </div>
+    </div>
+  );
+}
 
 export default Dashboard;

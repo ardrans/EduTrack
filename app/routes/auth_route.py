@@ -330,3 +330,22 @@ def delete_role(role_id):
         description: Role not found
     """
     return role_service.delete_role(role_id)
+
+@auth_routes.route('/user-role', methods=['GET'])
+def get_user_role():
+    """
+    Get the logged-in user's role
+    ---
+    tags:
+      - Roles
+    responses:
+      200:
+        description: Successfully retrieved the user's role
+      403:
+        description: Permission denied
+    """
+    return role_service.get_logged_in_user_role()
+
+
+
+

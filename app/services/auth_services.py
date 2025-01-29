@@ -6,12 +6,15 @@ from app.models import db
 from app.models import Users, Roles
 from ..logging__config import init_logger
 from datetime import datetime, timedelta, timezone
+from app.auth_utils import token_required
+from app.middleware.permission import check_permission
+from flask import jsonify, g
 from functools import wraps
 
 # Set up the logger for this module
 logger = init_logger(__name__)
 
-# Secret key for encoding/decoding JWTs
+# Secret key for encoding/decoding JWTsa
 SECRET_KEY = 'edutrack1234'
 
 # User services
@@ -139,7 +142,13 @@ class UserService:
 # Role services
 class RoleService:
     @staticmethod
+    @token_required
     def create_role(data):
+        # Check if the user has permission to create roles
+        permission_error = check_permission('manage_roles')  # 'manage_roles' should match the action in your permissions dictionary
+        if permission_error:
+            return permission_error  # Return the error response if the user lacks permission
+
         logger.info("Creating a new role with data: %s", data)
         try:
             new_role = Roles(
@@ -203,6 +212,24 @@ class RoleService:
             logger.error("Error deleting role: %s", str(e), exc_info=True)
             return jsonify({"error": str(e)}), 400
 
+    @staticmethod
+    def get_logged_in_user_role():
+        """
+        Retrieve the role of the logged-in user.
+        """
+        logger.info("Fetching logged-in user's role")
+        try:
+            # Check if the user is authenticated
+            user = g.user
+            if not user:
+                return jsonify({"error": "User not authenticated"}), 403
+
+
+            # Return the role of the user
+            return jsonify({"role": user.role.name}), 200
+        except Exception as e:
+            logger.error("Error fetching logged-in user's role: %s", str(e), exc_info=True)
+            return jsonify({"error": str(e)}), 400
 
 # Expose services
 user_service = UserService()

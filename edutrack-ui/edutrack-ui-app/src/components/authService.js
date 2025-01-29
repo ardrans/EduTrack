@@ -41,7 +41,18 @@ export const createUserWithRole = async (data) => {
 
 export const addRole = async (roleName) => {
     try {
-        const response = await axios.post(`${API_URL}/auth/roles`, { name: roleName });
+        // Retrieve the token from localStorage
+        const token = localStorage.getItem('token');
+
+        // Make the API call with the Authorization header
+        const response = await axios.post(
+            `${API_URL}/auth/roles`,
+            { name: roleName },
+            {
+                headers: { Authorization: `Bearer ${token}` },
+            }
+        );
+
         return response.data;
     } catch (error) {
         console.error('Error adding role:', error);
@@ -76,7 +87,7 @@ export const createStudent = async (data) => {
 
 export const updateStudent = async (id, data) => {
     const token = localStorage.getItem('token');
-    const response = await axios.put(`${API_URL}/students/students${id}`, data, {
+    const response = await axios.put(`${API_URL}/students/students/${id}`, data, {
         headers: { Authorization: `Bearer ${token}` },
     });
     return response.data;
@@ -84,7 +95,7 @@ export const updateStudent = async (id, data) => {
 
 export const deleteStudent = async (id) => {
     const token = localStorage.getItem('token');
-    const response = await axios.delete(`${API_URL}/students/students${id}`, {
+    const response = await axios.delete(`${API_URL}/students/students/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
     });
     return response.data;

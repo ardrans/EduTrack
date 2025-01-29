@@ -762,3 +762,395 @@ sqlalchemy.exc.DataError: (pymysql.err.DataError) (1366, "Incorrect integer valu
 2025-01-18 21:27:36,987 - app.services.student_services - INFO - Student created successfully with ID: 1
 2025-01-18 21:27:36,996 - app.services.student_services - INFO - Fetching all students
 2025-01-18 21:27:36,999 - app.services.student_services - INFO - Fetched 1 students
+2025-01-19 12:05:23,870 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hmail.com
+2025-01-19 12:05:24,061 - app.services.auth_services - WARNING - Invalid credentials for user with email: nsardra@hmail.com
+2025-01-19 12:05:30,121 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hmail.com
+2025-01-19 12:05:30,235 - app.services.auth_services - INFO - User logged in successfully: <Users 1>
+2025-01-19 12:05:55,011 - app.services.student_services - INFO - Fetching all students
+2025-01-19 12:05:55,013 - app.services.student_services - INFO - Fetching all students
+2025-01-19 12:05:55,020 - app.services.student_services - INFO - Fetched 1 students
+2025-01-19 12:05:55,022 - app.services.student_services - INFO - Fetched 1 students
+2025-01-19 12:06:31,107 - app.services.student_services - INFO - Attempting to create a new student with data: {'name': 'stud2', 'email': 'nsardwwrhhha@gmail.com', 'phone': '5667778889', 'profile_picture': 'aa'}
+2025-01-19 12:06:31,118 - app.services.student_services - ERROR - Error creating student: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'nsardwwrhhha@gmail.com' for key 'students.email'")
+[SQL: INSERT INTO students (name, email, phone, profile_picture) VALUES (%(name)s, %(email)s, %(phone)s, %(profile_picture)s)]
+[parameters: {'name': 'stud2', 'email': 'nsardwwrhhha@gmail.com', 'phone': '5667778889', 'profile_picture': 'aa'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'nsardwwrhhha@gmail.com' for key 'students.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/student_services.py", line 23, in create_student
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'nsardwwrhhha@gmail.com' for key 'students.email'")
+[SQL: INSERT INTO students (name, email, phone, profile_picture) VALUES (%(name)s, %(email)s, %(phone)s, %(profile_picture)s)]
+[parameters: {'name': 'stud2', 'email': 'nsardwwrhhha@gmail.com', 'phone': '5667778889', 'profile_picture': 'aa'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-01-19 12:11:37,218 - app.services.student_services - INFO - Attempting to create a new student with data: {'name': 'stud2', 'email': 'nsardwwrhhha@gmail.com', 'phone': '5667778889', 'profile_picture': 'aa'}
+2025-01-19 12:11:37,228 - app.services.student_services - ERROR - Error creating student: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'nsardwwrhhha@gmail.com' for key 'students.email'")
+[SQL: INSERT INTO students (name, email, phone, profile_picture) VALUES (%(name)s, %(email)s, %(phone)s, %(profile_picture)s)]
+[parameters: {'name': 'stud2', 'email': 'nsardwwrhhha@gmail.com', 'phone': '5667778889', 'profile_picture': 'aa'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'nsardwwrhhha@gmail.com' for key 'students.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/student_services.py", line 23, in create_student
+    db.session.commit()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'nsardwwrhhha@gmail.com' for key 'students.email'")
+[SQL: INSERT INTO students (name, email, phone, profile_picture) VALUES (%(name)s, %(email)s, %(phone)s, %(profile_picture)s)]
+[parameters: {'name': 'stud2', 'email': 'nsardwwrhhha@gmail.com', 'phone': '5667778889', 'profile_picture': 'aa'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-01-19 12:12:51,622 - app.services.student_services - INFO - Fetching all students
+2025-01-19 12:12:51,623 - app.services.student_services - INFO - Fetching all students
+2025-01-19 12:12:51,634 - app.services.student_services - INFO - Fetched 1 students
+2025-01-19 12:12:51,634 - app.services.student_services - INFO - Fetched 1 students
+2025-01-19 12:13:15,340 - app.services.student_services - INFO - Attempting to create a new student with data: {'name': 'stud2', 'email': 'anoopmmkt@gmail.com', 'phone': '5667778889', 'profile_picture': 'qq'}
+2025-01-19 12:13:15,361 - app.services.student_services - INFO - Student created successfully with ID: 4
+2025-01-19 12:13:15,371 - app.services.student_services - INFO - Fetching all students
+2025-01-19 12:13:15,372 - app.services.student_services - INFO - Fetched 2 students
+2025-01-19 12:14:22,283 - app.services.student_services - INFO - Updating student with ID: 4 with data: {'email': 'anoopmmkt@gmail.com', 'id': 4, 'name': 'stud2', 'phone': '5667778889', 'profile_picture': 'qqy'}
+2025-01-19 12:14:22,295 - app.services.student_services - INFO - Student updated successfully with ID: 4
+2025-01-19 12:14:22,326 - app.services.student_services - INFO - Fetching all students
+2025-01-19 12:14:22,328 - app.services.student_services - INFO - Fetched 2 students
+2025-01-19 12:14:25,845 - app.services.student_services - INFO - Deleting student with ID: 4
+2025-01-19 12:14:25,851 - app.services.student_services - INFO - Student deleted successfully with ID: 4
+2025-01-19 12:14:25,858 - app.services.student_services - INFO - Fetching all students
+2025-01-19 12:14:25,861 - app.services.student_services - INFO - Fetched 1 students
+2025-01-19 12:32:58,032 - app.services.student_services - INFO - Fetching all students
+2025-01-19 12:32:58,039 - app.services.student_services - INFO - Fetched 1 students
+2025-01-19 12:32:58,042 - app.services.student_services - INFO - Fetching all students
+2025-01-19 12:32:58,043 - app.services.student_services - INFO - Fetched 1 students
+2025-01-19 14:39:14,959 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-19 14:39:15,128 - app.services.auth_services - WARNING - Invalid credentials for user with email: nsardra@dmail.com
+2025-01-19 14:39:58,162 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-19 14:39:58,281 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-19 14:40:04,933 - app.services.student_services - INFO - Fetching all students
+2025-01-19 14:40:04,937 - app.services.student_services - INFO - Fetched 1 students
+2025-01-19 14:40:04,940 - app.services.student_services - INFO - Fetching all students
+2025-01-19 14:40:04,941 - app.services.student_services - INFO - Fetched 1 students
+2025-01-19 14:40:22,564 - app.services.student_services - INFO - Deleting student with ID: 1
+2025-01-19 14:40:22,584 - app.services.student_services - INFO - Student deleted successfully with ID: 1
+2025-01-19 14:40:22,593 - app.services.student_services - INFO - Fetching all students
+2025-01-19 14:40:22,595 - app.services.student_services - INFO - Fetched 0 students
+2025-01-20 19:02:37,359 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-20 19:03:38,644 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-20 19:03:38,785 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-20 19:05:34,143 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'hr'}
+2025-01-20 19:05:34,195 - app.services.auth_services - INFO - Role created successfully: <Roles 2>
+2025-01-21 16:46:53,671 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-21 16:46:57,138 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-21 16:47:57,468 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-21 16:47:57,581 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-22 20:30:22,994 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-22 20:30:23,235 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-22 20:30:23,285 - app.services.student_services - INFO - Fetching all students
+2025-01-22 20:30:23,289 - app.services.student_services - INFO - Fetched 0 students
+2025-01-22 20:30:23,291 - app.services.student_services - INFO - Fetching all students
+2025-01-22 20:30:23,291 - app.services.student_services - INFO - Fetched 0 students
+2025-01-22 20:33:09,009 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-22 20:33:09,012 - app.services.auth_services - WARNING - Invalid credentials for user with email: nsardra@hrmail.com
+2025-01-22 20:33:37,097 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-22 20:33:37,102 - app.services.auth_services - WARNING - Invalid credentials for user with email: nsardra@hrmail.com
+2025-01-22 20:37:19,169 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-22 20:37:19,272 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-22 20:37:19,287 - app.services.student_services - INFO - Fetching all students
+2025-01-22 20:37:19,288 - app.services.student_services - INFO - Fetched 0 students
+2025-01-22 20:37:19,290 - app.services.student_services - INFO - Fetching all students
+2025-01-22 20:37:19,290 - app.services.student_services - INFO - Fetched 0 students
+2025-01-22 20:41:41,604 - app.services.student_services - INFO - Fetching all students
+2025-01-22 20:41:41,608 - app.services.student_services - INFO - Fetched 0 students
+2025-01-22 20:41:41,621 - app.services.student_services - INFO - Fetching all students
+2025-01-22 20:41:41,621 - app.services.student_services - INFO - Fetching all students
+2025-01-22 20:41:41,621 - app.services.student_services - INFO - Fetching all students
+2025-01-22 20:41:41,621 - app.services.student_services - INFO - Fetched 0 students
+2025-01-22 20:41:41,622 - app.services.student_services - INFO - Fetched 0 students
+2025-01-22 20:41:41,622 - app.services.student_services - INFO - Fetched 0 students
+2025-01-23 16:30:32,533 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-23 16:30:38,285 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-23 16:31:28,325 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-23 16:31:28,450 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-23 16:40:02,751 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-23 16:40:02,866 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-23 16:45:14,800 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-23 16:45:14,903 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-23 16:50:19,352 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-23 16:50:19,463 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-23 16:53:38,583 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-23 16:53:38,699 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-23 16:57:39,670 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-23 16:57:39,778 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-23 16:57:39,817 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-23 16:57:39,817 - app.services.auth_services - ERROR - Error fetching logged-in user's role: name 'g' is not defined
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 221, in get_logged_in_user_role
+    user = g.user
+           ^
+NameError: name 'g' is not defined
+2025-01-23 17:00:31,604 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-23 17:00:31,751 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-23 17:00:31,795 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-23 17:00:31,795 - app.services.auth_services - ERROR - Error fetching logged-in user's role: user
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 223, in get_logged_in_user_role
+    user = g.user
+           ^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask/ctx.py", line 56, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: user
+2025-01-23 17:01:29,879 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-23 17:01:29,983 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-23 17:01:30,022 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-23 17:01:30,022 - app.services.auth_services - ERROR - Error fetching logged-in user's role: user
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/auth_services.py", line 223, in get_logged_in_user_role
+    user = g.user
+           ^^^^^^
+  File "/Users/ardrans/PycharmProjects/EduTrack/myenv/lib/python3.12/site-packages/flask/ctx.py", line 56, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: user
+2025-01-24 12:10:13,506 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@dmail.com
+2025-01-24 12:10:13,743 - app.services.auth_services - INFO - User logged in successfully: <Users 2>
+2025-01-24 12:10:13,783 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-24 12:10:13,807 - app.services.student_services - INFO - Fetching all students
+2025-01-24 12:10:13,812 - app.services.student_services - INFO - Fetched 0 students
+2025-01-24 12:10:13,814 - app.services.student_services - INFO - Fetching all students
+2025-01-24 12:10:13,815 - app.services.student_services - INFO - Fetched 0 students
+2025-01-24 12:10:21,048 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-24 12:10:21,054 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-24 12:10:21,074 - app.services.student_services - INFO - Fetching all students
+2025-01-24 12:10:21,078 - app.services.student_services - INFO - Fetched 0 students
+2025-01-24 12:10:21,086 - app.services.student_services - INFO - Fetching all students
+2025-01-24 12:10:21,087 - app.services.student_services - INFO - Fetched 0 students
+2025-01-24 12:10:49,964 - app.services.auth_services - INFO - Attempting to log in user with email: nsardsasra@hrmail.com
+2025-01-24 12:10:50,009 - app.services.auth_services - WARNING - Invalid credentials for user with email: nsardsasra@hrmail.com
+2025-01-24 12:11:24,148 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-24 12:11:24,255 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-24 12:11:24,290 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-24 12:11:24,306 - app.services.student_services - INFO - Fetching all students
+2025-01-24 12:11:24,307 - app.services.student_services - INFO - Fetched 0 students
+2025-01-24 12:11:24,309 - app.services.student_services - INFO - Fetching all students
+2025-01-24 12:11:24,310 - app.services.student_services - INFO - Fetched 0 students
+2025-01-24 12:11:30,406 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-24 12:11:30,413 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-24 12:11:30,432 - app.services.student_services - INFO - Fetching all students
+2025-01-24 12:11:30,432 - app.services.student_services - INFO - Fetched 0 students
+2025-01-24 12:11:30,435 - app.services.student_services - INFO - Fetching all students
+2025-01-24 12:11:30,436 - app.services.student_services - INFO - Fetched 0 students
+2025-01-26 21:23:33,428 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-26 21:23:33,435 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-26 21:37:00,919 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hmail.com
+2025-01-26 21:37:01,115 - app.services.auth_services - WARNING - Invalid credentials for user with email: nsardra@hmail.com
+2025-01-26 21:37:13,055 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-26 21:37:13,175 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-26 21:37:13,210 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-26 21:37:13,230 - app.services.student_services - INFO - Fetching all students
+2025-01-26 21:37:13,232 - app.services.student_services - INFO - Fetching all students
+2025-01-26 21:37:13,234 - app.services.student_services - INFO - Fetched 0 students
+2025-01-26 21:37:13,234 - app.services.student_services - INFO - Fetched 0 students
+2025-01-28 16:44:39,120 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-28 16:44:39,122 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-28 16:44:54,079 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-28 16:44:54,260 - app.services.auth_services - WARNING - Invalid credentials for user with email: nsardra@hrmail.com
+2025-01-28 16:44:59,722 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-28 16:44:59,834 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-28 16:44:59,870 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-28 16:46:37,121 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'developer'}
+2025-01-28 16:46:37,141 - app.services.auth_services - INFO - Role created successfully: <Roles 3>

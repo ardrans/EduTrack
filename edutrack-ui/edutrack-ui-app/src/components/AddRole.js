@@ -16,8 +16,8 @@ const AddRole = () => {
         setLoading(true);
         try {
             const response = await addRole(roleName);
-            setMessage(response.message || 'Role added successfully');
-            setRoleName('');  // Reset input field after successful submission
+            setMessage(response.message);
+            setRoleName(''); 
         } catch (error) {
             setMessage(error.response?.data?.error || 'Error adding role');
         }
