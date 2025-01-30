@@ -3,6 +3,8 @@ from app.models import db
 from app.models import Batches
 from app.auth_utils import token_required
 from ..logging__config import init_logger
+from sqlalchemy.orm import joinedload
+
 # Set up a logger for the module
 logger = init_logger(__name__)
 
@@ -15,7 +17,10 @@ class BatchService:
             new_batch = Batches(
                 name=data.get('name'),
                 start_date=data.get('start_date'),
-                end_date=data.get('end_date')
+                end_date=data.get('end_date'),
+                trainer_id = data.get('trainer_id'),
+                course_id=data.get('course_id')
+
             )
             db.session.add(new_batch)
             db.session.commit()
@@ -37,33 +42,60 @@ class BatchService:
         try:
             logger.info("Fetching all batches")
             batches = Batches.query.all()
+            total_batches = len(batches)  # Get the total count of batches
             batches_list = [
                 {"id": batch.id, "name": batch.name, "start_date": batch.start_date, "end_date": batch.end_date}
                 for batch in batches
             ]
-            logger.info("Fetched %d batches", len(batches_list))
-            return jsonify(batches_list), 200
+            logger.info("Fetched %d batches", total_batches)
+            return jsonify({"total_batches": total_batches, "batches": batches_list}), 200
         except Exception as e:
             logger.error("Error fetching batches: %s", str(e), exc_info=True)
             return jsonify({"error": str(e)}), 400
-
     @staticmethod
     @token_required
     def get_batch(batch_id):
         try:
             logger.info("Fetching batch with ID: %s", batch_id)
-            batch = Batches.query.get_or_404(batch_id)
-            logger.info("Fetched batch with ID: %s", batch_id)
-            return jsonify({
+
+            # Using joinedload to eagerly load the trainer and course relationships
+            batch = Batches.query.options(
+                joinedload(Batches.trainer),
+                joinedload(Batches.course)
+            ).get_or_404(batch_id)
+
+            # Fetch students count in the batch
+            student_count = len(batch.students)
+
+            # Fetch trainer details
+            trainer = batch.trainer  # The trainer is now eagerly loaded
+            trainer_info = {"id": trainer.id, "name": trainer.name} if trainer else None
+
+            # Fetch associated topics for the course
+            topics = [{"id": topic.id, "name": topic.name} for topic in batch.course.topics] if batch.course else []
+
+            # Log the final data to ensure proper format
+            response_data = {
                 "id": batch.id,
                 "name": batch.name,
                 "start_date": batch.start_date,
-                "end_date": batch.end_date
-            }), 200
+                "end_date": batch.end_date,
+                "student_count": student_count,
+                "trainer": trainer_info,
+                "topics": topics
+            }
+            logger.info("Batch data to return: %s", response_data)
+
+            # Return the response with JSON
+            return jsonify(response_data), 200
+
         except Exception as e:
             logger.error("Error fetching batch with ID %s: %s", batch_id, str(e), exc_info=True)
-            return jsonify({"error": str(e)}), 400
-
+            error_data = {
+                "error": "Failed to fetch batch details",
+                "details": str(e)
+            }
+            return jsonify(error_data), 400
     @staticmethod
     @token_required
     def update_batch(batch_id, data):

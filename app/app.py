@@ -50,6 +50,7 @@ def create_app():
         from app.routes.topic_route import topic_routes
         from app.routes.course_route import course_routes
         from app.routes.student_route import student_routes
+        from app.routes.associations_routes import associations_routes
 
         # Register blueprints
         app.register_blueprint(auth_routes, url_prefix='/auth')
@@ -57,6 +58,9 @@ def create_app():
         app.register_blueprint(topic_routes, url_prefix='/topics')
         app.register_blueprint(course_routes, url_prefix='/courses')
         app.register_blueprint(student_routes, url_prefix='/students')
+        app.register_blueprint(associations_routes, url_prefix='/associations')
+
+
 
     return app
 

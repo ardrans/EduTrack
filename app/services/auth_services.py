@@ -108,6 +108,35 @@ class UserService:
             return jsonify({"error": str(e)}), 400
 
     @staticmethod
+    def get_trainers_count():
+        logger.info("Fetching count of trainers")
+        try:
+            trainer_role = Roles.query.filter_by(name='Trainer').first()
+            if not trainer_role:
+                return jsonify({"error": "Trainer role not found"}), 404
+
+            trainers_count = Users.query.filter_by(role_id=trainer_role.id).count()
+            logger.info("Total trainers: %d", trainers_count)
+            return jsonify({"trainers_count": trainers_count}), 200
+        except Exception as e:
+            logger.error("Error fetching trainers count: %s", str(e), exc_info=True)
+            return jsonify({"error": str(e)}), 400
+
+    @staticmethod
+    def get_trainers():
+        try:
+            trainer_role = Roles.query.filter_by(name='Trainer').first()
+            if not trainer_role:
+                return jsonify({"error": "Trainer role not found"}), 404
+
+            trainers = Users.query.filter_by(role_id=trainer_role.id).all()
+            trainer_list = [{"id": trainer.id, "name": trainer.name} for trainer in trainers]
+
+            return jsonify(trainer_list), 200
+        except Exception as e:
+            return jsonify({"error": str(e)}), 400
+
+    @staticmethod
     def login_user(data):
         logger.info("Attempting to log in user with email: %s", data.get('email'))
         user = Users.query.filter_by(email=data.get('email')).first()

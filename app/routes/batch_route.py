@@ -74,7 +74,7 @@ def get_batches():
 @batch_routes.route('/batches/<int:batch_id>', methods=['GET'])
 def get_batch(batch_id):
     """
-    Get Batch by ID
+    Get Batch by ID along with students count, trainer, and topics
     ---
     tags:
       - Batches
@@ -86,7 +86,7 @@ def get_batch(batch_id):
         example: 1
     responses:
       200:
-        description: Batch details
+        description: Batch details with student count, trainer, and topics
         schema:
           type: object
           properties:
@@ -104,6 +104,29 @@ def get_batch(batch_id):
               type: string
               format: date
               example: 2025-06-30
+            student_count:
+              type: integer
+              example: 30
+            trainer:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  example: 1
+                name:
+                  type: string
+                  example: John Doe
+            topics:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: React Basics
       404:
         description: Batch not found
     """

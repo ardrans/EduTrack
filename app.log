@@ -1154,3 +1154,558 @@ AttributeError: user
 2025-01-28 16:44:59,870 - app.services.auth_services - INFO - Fetching logged-in user's role
 2025-01-28 16:46:37,121 - app.services.auth_services - INFO - Creating a new role with data: {'name': 'developer'}
 2025-01-28 16:46:37,141 - app.services.auth_services - INFO - Role created successfully: <Roles 3>
+2025-01-29 14:10:36,697 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-29 14:10:36,853 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-29 14:10:36,887 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 14:10:39,929 - app.services.student_services - INFO - Fetching all students
+2025-01-29 14:10:39,932 - app.services.student_services - INFO - Fetched 0 students
+2025-01-29 14:10:39,933 - app.services.student_services - INFO - Fetching all students
+2025-01-29 14:10:39,935 - app.services.student_services - INFO - Fetched 0 students
+2025-01-29 14:10:56,301 - app.services.student_services - INFO - Attempting to create a new student with data: {'name': 'sa', 'email': 'nsardwwrhhha@gmail.com', 'phone': '3333', 'profile_picture': ''}
+2025-01-29 14:10:56,322 - app.services.student_services - INFO - Student created successfully with ID: 5
+2025-01-29 14:10:56,333 - app.services.student_services - INFO - Fetching all students
+2025-01-29 14:10:56,335 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 14:11:04,407 - app.services.student_services - INFO - Updating student with ID: 5 with data: {'email': 'nsardwwrhhha@gmail.com', 'id': 5, 'name': 'sa', 'phone': '33334', 'profile_picture': ''}
+2025-01-29 14:11:04,425 - app.services.student_services - INFO - Student updated successfully with ID: 5
+2025-01-29 14:11:04,439 - app.services.student_services - INFO - Fetching all students
+2025-01-29 14:11:04,440 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 14:31:27,762 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 14:31:27,767 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 14:32:31,723 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 14:32:31,731 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 14:39:29,507 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 14:39:29,513 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 14:39:31,305 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 14:39:31,314 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 14:39:31,329 - app.services.batch_services - INFO - Fetched 0 batches
+2025-01-29 14:39:31,329 - app.services.batch_services - INFO - Fetched 0 batches
+2025-01-29 14:39:58,619 - app.services.batch_services - INFO - Attempting to create a new batch with data: {'name': '25TVMB01', 'start_date': '2025-01-02', 'end_date': '2025-01-30'}
+2025-01-29 14:39:58,667 - app.services.batch_services - INFO - Batch created successfully with ID: 1
+2025-01-29 14:39:58,682 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 14:39:58,683 - app.services.batch_services - INFO - Fetched 1 batches
+2025-01-29 14:40:16,680 - app.services.batch_services - INFO - Updating batch with ID: 1 with data: {'name': '25TVMB01', 'start_date': '2025-01-02', 'end_date': '2025-01-30'}
+2025-01-29 14:40:16,694 - app.services.batch_services - INFO - Batch updated successfully with ID: 1
+2025-01-29 14:40:16,713 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 14:40:16,714 - app.services.batch_services - INFO - Fetched 1 batches
+2025-01-29 15:49:12,319 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 15:49:12,323 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 15:49:21,454 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-29 15:49:21,685 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-29 15:49:21,717 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 15:49:28,051 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 15:49:28,059 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 15:49:28,061 - app.services.batch_services - INFO - Fetched 1 batches
+2025-01-29 15:49:28,062 - app.services.batch_services - INFO - Fetched 1 batches
+2025-01-29 15:50:33,776 - app.services.batch_services - INFO - Attempting to create a new batch with data: {'name': '25TVMB02', 'start_date': '2025-01-25', 'end_date': '2025-01-27'}
+2025-01-29 15:50:33,806 - app.services.batch_services - INFO - Batch created successfully with ID: 2
+2025-01-29 15:50:33,818 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 15:50:33,819 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 15:50:37,749 - app.services.batch_services - INFO - Deleting batch with ID: 2
+2025-01-29 15:50:37,775 - app.services.batch_services - INFO - Batch deleted successfully with ID: 2
+2025-01-29 15:50:37,785 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 15:50:37,786 - app.services.batch_services - INFO - Fetched 1 batches
+2025-01-29 15:59:17,689 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 15:59:17,697 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 15:59:19,596 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 15:59:19,598 - app.services.batch_services - INFO - Fetched 1 batches
+2025-01-29 15:59:19,604 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 15:59:19,606 - app.services.batch_services - INFO - Fetched 1 batches
+2025-01-29 16:04:18,243 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:04:18,248 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:04:19,612 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:04:19,615 - app.services.batch_services - INFO - Fetched 1 batches
+2025-01-29 16:04:19,623 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:04:19,626 - app.services.batch_services - INFO - Fetched 1 batches
+2025-01-29 16:05:38,038 - app.services.batch_services - INFO - Attempting to create a new batch with data: {'name': '25TVMB02', 'start_date': '2025-01-30', 'end_date': '2025-01-31'}
+2025-01-29 16:05:38,052 - app.services.batch_services - INFO - Batch created successfully with ID: 3
+2025-01-29 16:05:38,064 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:05:38,067 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:12:01,562 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:12:01,570 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:12:02,938 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:12:02,941 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:12:02,947 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:12:02,947 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:15:39,340 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:15:39,345 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:15:41,185 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:15:41,189 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:15:41,192 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:15:41,193 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:17:13,264 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:17:13,269 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:17:14,171 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:17:14,175 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:17:14,177 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:17:14,178 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:24:29,989 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:24:29,996 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:24:31,115 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:24:31,117 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:24:31,119 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:24:31,120 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:27:26,200 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:27:26,208 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:27:27,725 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:27:27,725 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:27:27,727 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:27:27,728 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:27:28,804 - app.services.batch_services - INFO - Fetching batch with ID: 1
+2025-01-29 16:27:28,836 - app.services.batch_services - INFO - Batch data to return: {'id': 1, 'name': '25TVMB01', 'start_date': datetime.date(2025, 1, 2), 'end_date': datetime.date(2025, 1, 30), 'student_count': 0, 'trainer': {'id': 1, 'name': 'ardra'}, 'topics': []}
+2025-01-29 16:31:50,653 - app.services.batch_services - INFO - Fetching batch with ID: 1
+2025-01-29 16:31:50,671 - app.services.batch_services - INFO - Batch data to return: {'id': 1, 'name': '25TVMB01', 'start_date': datetime.date(2025, 1, 2), 'end_date': datetime.date(2025, 1, 30), 'student_count': 0, 'trainer': {'id': 1, 'name': 'ardra'}, 'topics': []}
+2025-01-29 16:31:51,890 - app.services.batch_services - INFO - Fetching batch with ID: 1
+2025-01-29 16:31:51,893 - app.services.batch_services - INFO - Batch data to return: {'id': 1, 'name': '25TVMB01', 'start_date': datetime.date(2025, 1, 2), 'end_date': datetime.date(2025, 1, 30), 'student_count': 0, 'trainer': {'id': 1, 'name': 'ardra'}, 'topics': []}
+2025-01-29 16:35:24,790 - app.services.batch_services - INFO - Fetching batch with ID: 1
+2025-01-29 16:35:24,798 - app.services.batch_services - INFO - Batch data to return: {'id': 1, 'name': '25TVMB01', 'start_date': datetime.date(2025, 1, 2), 'end_date': datetime.date(2025, 1, 30), 'student_count': 0, 'trainer': {'id': 1, 'name': 'ardra'}, 'topics': []}
+2025-01-29 16:36:41,214 - app.services.batch_services - INFO - Fetching batch with ID: 1
+2025-01-29 16:36:41,224 - app.services.batch_services - INFO - Batch data to return: {'id': 1, 'name': '25TVMB01', 'start_date': datetime.date(2025, 1, 2), 'end_date': datetime.date(2025, 1, 30), 'student_count': 0, 'trainer': {'id': 1, 'name': 'ardra'}, 'topics': []}
+2025-01-29 16:36:42,545 - app.services.batch_services - INFO - Fetching batch with ID: 1
+2025-01-29 16:36:42,552 - app.services.batch_services - INFO - Batch data to return: {'id': 1, 'name': '25TVMB01', 'start_date': datetime.date(2025, 1, 2), 'end_date': datetime.date(2025, 1, 30), 'student_count': 0, 'trainer': {'id': 1, 'name': 'ardra'}, 'topics': []}
+2025-01-29 16:36:49,907 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:36:49,919 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 16:36:52,236 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:36:52,238 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:36:52,250 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 16:36:52,252 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 16:36:53,518 - app.services.batch_services - INFO - Fetching batch with ID: 1
+2025-01-29 16:36:53,523 - app.services.batch_services - INFO - Batch data to return: {'id': 1, 'name': '25TVMB01', 'start_date': datetime.date(2025, 1, 2), 'end_date': datetime.date(2025, 1, 30), 'student_count': 0, 'trainer': {'id': 1, 'name': 'ardra'}, 'topics': []}
+2025-01-29 20:00:04,902 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 20:00:04,904 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 20:00:19,663 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-29 20:00:19,858 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-29 20:00:19,896 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 20:06:50,466 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 20:06:50,482 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 20:06:50,487 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 20:06:50,488 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 20:06:58,497 - app.services.batch_services - INFO - Fetching batch with ID: 1
+2025-01-29 20:06:58,522 - app.services.batch_services - INFO - Batch data to return: {'id': 1, 'name': '25TVMB01', 'start_date': datetime.date(2025, 1, 2), 'end_date': datetime.date(2025, 1, 30), 'student_count': 0, 'trainer': {'id': 1, 'name': 'ardra'}, 'topics': []}
+2025-01-29 21:04:04,180 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:04:04,182 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:04:12,666 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-29 21:04:12,801 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-29 21:04:12,844 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:05:56,834 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:05:56,845 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:07:16,104 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:07:16,110 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:07:16,132 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:07:16,144 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:07:16,148 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:07:16,148 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:07:16,166 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:07:16,167 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:07:16,171 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:07:16,172 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:07:16,188 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:07:16,189 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:07:16,190 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:07:16,191 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:24:56,407 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:24:56,414 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:24:56,430 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:24:56,446 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:24:56,453 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:24:56,459 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:24:56,460 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:24:56,461 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:24:56,465 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:24:56,469 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:24:56,469 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:24:56,471 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:24:56,474 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:24:56,475 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:26:41,720 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:26:41,728 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:26:41,744 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:26:41,746 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:26:41,750 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:26:41,753 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:26:41,754 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:26:41,755 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:26:41,760 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:26:41,763 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:26:41,764 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:26:41,765 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:26:41,769 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:26:41,769 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:26:53,906 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:26:53,908 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:26:53,917 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:26:53,919 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:26:59,354 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:26:59,364 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:26:59,374 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:26:59,379 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:26:59,385 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:26:59,389 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:26:59,390 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:26:59,391 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:26:59,397 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:26:59,399 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:26:59,400 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:26:59,401 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:26:59,405 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:26:59,405 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:27:01,165 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:27:01,165 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:27:01,166 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:27:01,167 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:27:03,060 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:27:03,068 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:27:03,077 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:27:03,081 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:27:03,085 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:27:03,086 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:27:03,089 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:27:03,089 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:27:03,093 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:27:03,094 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:27:03,095 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:27:03,096 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:27:03,100 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:27:03,101 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:27:51,841 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:27:51,843 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:27:51,851 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:27:51,852 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:27:58,252 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:27:58,263 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 21:27:58,280 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:27:58,283 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:27:58,288 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 21:27:58,289 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:27:58,290 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 21:27:58,291 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:27:58,297 - app.services.student_services - INFO - Fetching all students
+2025-01-29 21:27:58,299 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 21:27:58,299 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:27:58,301 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 21:27:58,303 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 21:27:58,304 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:03:15,709 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 23:03:15,711 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 23:03:25,130 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-29 23:03:25,263 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-29 23:03:25,293 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 23:03:25,310 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 23:03:25,317 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 23:03:25,319 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 23:03:25,322 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 23:03:25,326 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:03:25,327 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:03:25,327 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:03:25,328 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:03:25,334 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:03:25,335 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:03:25,337 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:03:25,338 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:03:27,807 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:03:27,808 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:03:27,810 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:03:27,811 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:03:38,538 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 23:03:38,544 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 23:03:38,544 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 23:03:38,546 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 23:03:38,553 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:03:38,557 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:03:38,558 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:03:38,560 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:03:38,566 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:03:38,567 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:03:38,568 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:03:38,568 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:03:39,929 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:03:39,931 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:03:39,936 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:03:39,937 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:04:58,300 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 23:04:58,307 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-29 23:04:58,330 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 23:04:58,338 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 23:04:58,339 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 23:04:58,341 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 23:04:58,346 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:04:58,347 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:04:58,347 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:04:58,348 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:04:58,361 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:04:58,361 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:04:58,363 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:04:58,363 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:05:13,605 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:05:13,606 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:05:13,613 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:05:13,614 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:05:14,814 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 23:05:14,819 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 23:05:14,825 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 23:05:14,835 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:05:14,836 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 23:05:14,840 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:05:14,848 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:05:14,850 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:05:14,856 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:05:14,857 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:05:14,857 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:05:14,858 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:05:16,509 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:05:16,511 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:05:16,512 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:05:16,513 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:05:17,540 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 23:05:17,541 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-29 23:05:17,543 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 23:05:17,543 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-29 23:05:17,552 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:05:17,554 - app.services.student_services - INFO - Fetching all students
+2025-01-29 23:05:17,555 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:05:17,555 - app.services.student_services - INFO - Fetched 1 students
+2025-01-29 23:05:17,564 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:05:17,566 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:05:17,566 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:05:17,568 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:06:12,016 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:06:12,019 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-29 23:06:12,027 - app.services.batch_services - INFO - Fetching all batches
+2025-01-29 23:06:12,028 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:21:08,219 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 12:21:08,221 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 12:21:16,848 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-30 12:21:16,988 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-30 12:21:17,012 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 12:21:17,029 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 12:21:17,035 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 12:21:17,039 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 12:21:17,040 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 12:21:17,042 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:21:17,045 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:21:17,046 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:21:17,046 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:21:17,053 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:21:17,056 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:21:17,058 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:21:17,059 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:21:45,633 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:21:45,635 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:21:45,652 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:21:45,657 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:21:46,560 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 12:21:46,560 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 12:21:46,568 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 12:21:46,568 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 12:21:46,577 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:21:46,578 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:21:46,578 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:21:46,579 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:21:46,591 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:21:46,592 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:21:46,594 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:21:46,595 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:21:47,799 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:21:47,800 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:21:47,806 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:21:47,808 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:21:49,573 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 12:21:49,576 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 12:21:49,580 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 12:21:49,583 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:21:49,583 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 12:21:49,585 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:21:49,592 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:21:49,592 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:21:49,593 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:21:49,594 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:21:49,598 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:21:49,599 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:46:01,438 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:46:01,441 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:46:01,451 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:46:01,452 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:46:02,818 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 12:46:02,819 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 12:46:02,831 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 12:46:02,831 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 12:46:02,839 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:46:02,840 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:46:02,841 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:46:02,843 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:46:02,854 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:46:02,855 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:46:02,856 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:46:02,856 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:46:03,814 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:46:03,814 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:46:03,815 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:46:03,816 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:46:05,510 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 12:46:05,511 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 12:46:05,515 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 12:46:05,515 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 12:46:05,523 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:46:05,524 - app.services.student_services - INFO - Fetching all students
+2025-01-30 12:46:05,525 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:46:05,526 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 12:46:05,533 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:46:05,534 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 12:46:05,534 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 12:46:05,536 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 20:22:58,775 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 20:22:58,779 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 20:23:10,294 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-30 20:23:10,507 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-30 20:23:10,545 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 20:23:10,563 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 20:23:10,571 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 20:23:10,575 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 20:23:10,577 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 20:23:10,581 - app.services.student_services - INFO - Fetching all students
+2025-01-30 20:23:10,582 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 20:23:10,582 - app.services.student_services - INFO - Fetching all students
+2025-01-30 20:23:10,583 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 20:23:10,587 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 20:23:10,589 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 20:23:10,591 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 20:23:10,591 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 20:28:41,994 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 20:28:41,995 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 20:28:42,036 - app.services.couses_service - INFO - Fetched 1 courses
+2025-01-30 20:28:42,036 - app.services.couses_service - INFO - Fetched 1 courses
+2025-01-30 20:49:14,618 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 20:49:14,627 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 20:49:14,647 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 20:49:14,655 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 20:49:14,658 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 20:49:14,660 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 20:49:14,663 - app.services.student_services - INFO - Fetching all students
+2025-01-30 20:49:14,664 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 20:49:14,665 - app.services.student_services - INFO - Fetching all students
+2025-01-30 20:49:14,665 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 20:49:14,670 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 20:49:14,670 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 20:49:14,671 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 20:49:14,672 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 20:49:23,175 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 20:49:23,176 - app.services.couses_service - INFO - Fetched 1 courses
+2025-01-30 20:49:23,180 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 20:49:23,184 - app.services.couses_service - INFO - Fetched 1 courses
+2025-01-30 20:50:07,755 - app.services.couses_service - INFO - Attempting to create a new course with data: {'name': 'Java', 'description': 'ee'}
+2025-01-30 20:50:07,782 - app.services.couses_service - INFO - Course created successfully with ID: 2
+2025-01-30 20:50:07,793 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 20:50:07,795 - app.services.couses_service - INFO - Fetched 2 courses
+2025-01-30 21:24:05,830 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 21:24:05,834 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 21:24:14,213 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-30 21:24:14,339 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-30 21:24:14,365 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 21:24:14,378 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 21:24:14,382 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 21:24:14,384 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 21:24:14,386 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 21:24:14,389 - app.services.student_services - INFO - Fetching all students
+2025-01-30 21:24:14,390 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 21:24:14,392 - app.services.student_services - INFO - Fetching all students
+2025-01-30 21:24:14,393 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 21:24:14,396 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 21:24:14,397 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 21:24:14,399 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 21:24:14,400 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 21:24:17,256 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 21:24:17,257 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 21:24:17,259 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 21:24:17,259 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 21:25:47,233 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 21:25:47,244 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 21:25:47,264 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 21:25:47,268 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 21:25:47,275 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 21:25:47,279 - app.services.student_services - INFO - Fetching all students
+2025-01-30 21:25:47,280 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 21:25:47,281 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 21:25:47,286 - app.services.student_services - INFO - Fetching all students
+2025-01-30 21:25:47,287 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 21:25:47,289 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 21:25:47,290 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 21:25:47,292 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 21:25:47,292 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 21:25:49,882 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 21:25:49,884 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 21:25:49,884 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 21:25:49,886 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 21:25:51,115 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 21:25:51,119 - app.services.couses_service - INFO - Fetched 2 courses
+2025-01-30 21:25:51,125 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 21:25:51,127 - app.services.couses_service - INFO - Fetched 2 courses
+2025-01-30 22:13:50,123 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 22:13:50,134 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 22:13:50,150 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 22:13:50,151 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 22:13:50,153 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 22:13:50,153 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 22:13:50,166 - app.services.student_services - INFO - Fetching all students
+2025-01-30 22:13:50,168 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 22:13:50,171 - app.services.student_services - INFO - Fetching all students
+2025-01-30 22:13:50,174 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 22:13:50,174 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 22:13:50,175 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 22:13:50,177 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 22:13:50,178 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 22:13:52,171 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 22:13:52,173 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 22:13:52,179 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 22:13:52,181 - app.services.batch_services - INFO - Fetched 2 batches
+2025-01-30 22:13:54,020 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 22:13:54,022 - app.services.couses_service - INFO - Fetched 2 courses
+2025-01-30 22:13:54,027 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 22:13:54,030 - app.services.couses_service - INFO - Fetched 2 courses
+2025-01-30 22:14:22,352 - app.services.batch_services - INFO - Attempting to create a new batch with data: {'name': '25TVMB03', 'start_date': '2025-01-10', 'end_date': '2025-02-08', 'trainer_id': '2', 'course_id': '1'}
+2025-01-30 22:14:22,375 - app.services.batch_services - INFO - Batch created successfully with ID: 4
+2025-01-30 22:14:22,385 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 22:14:22,386 - app.services.batch_services - INFO - Fetched 3 batches
+2025-01-30 22:14:33,368 - app.services.batch_services - INFO - Fetching batch with ID: 4
+2025-01-30 22:14:33,398 - app.services.batch_services - INFO - Batch data to return: {'id': 4, 'name': '25TVMB03', 'start_date': datetime.date(2025, 1, 10), 'end_date': datetime.date(2025, 2, 8), 'student_count': 0, 'trainer': None, 'topics': []}
+2025-01-30 22:14:41,042 - app.services.batch_services - INFO - Fetching batch with ID: 3
+2025-01-30 22:14:41,046 - app.services.batch_services - INFO - Batch data to return: {'id': 3, 'name': '25TVMB02', 'start_date': datetime.date(2025, 1, 30), 'end_date': datetime.date(2025, 1, 31), 'student_count': 0, 'trainer': None, 'topics': []}
+2025-01-30 22:14:44,927 - app.services.batch_services - INFO - Fetching batch with ID: 4
+2025-01-30 22:14:44,933 - app.services.batch_services - INFO - Batch data to return: {'id': 4, 'name': '25TVMB03', 'start_date': datetime.date(2025, 1, 10), 'end_date': datetime.date(2025, 2, 8), 'student_count': 0, 'trainer': None, 'topics': []}
+2025-01-30 22:22:44,343 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 22:22:44,347 - app.services.couses_service - INFO - Fetched 2 courses
+2025-01-30 22:22:44,351 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 22:22:44,353 - app.services.couses_service - INFO - Fetched 2 courses
+2025-01-30 22:23:21,000 - app.services.batch_services - INFO - Attempting to create a new batch with data: {'name': '25TVMB04', 'start_date': '2025-01-23', 'end_date': '2025-01-31', 'trainer_id': '2', 'course_id': '2'}
+2025-01-30 22:23:21,011 - app.services.batch_services - INFO - Batch created successfully with ID: 5
+2025-01-30 22:23:21,024 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 22:23:21,026 - app.services.batch_services - INFO - Fetched 4 batches
+2025-01-30 22:27:18,525 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 22:27:18,537 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 22:27:26,910 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-30 22:27:27,045 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-30 22:27:27,077 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-30 22:27:27,096 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 22:27:27,100 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 22:27:27,102 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-30 22:27:27,103 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-30 22:27:27,105 - app.services.student_services - INFO - Fetching all students
+2025-01-30 22:27:27,106 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 22:27:27,107 - app.services.student_services - INFO - Fetching all students
+2025-01-30 22:27:27,107 - app.services.student_services - INFO - Fetched 1 students
+2025-01-30 22:27:27,110 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 22:27:27,110 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 22:27:27,111 - app.services.batch_services - INFO - Fetched 4 batches
+2025-01-30 22:27:27,112 - app.services.batch_services - INFO - Fetched 4 batches
+2025-01-30 22:27:29,067 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 22:27:29,069 - app.services.batch_services - INFO - Fetched 4 batches
+2025-01-30 22:27:29,075 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 22:27:29,076 - app.services.batch_services - INFO - Fetched 4 batches
+2025-01-30 22:27:30,682 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 22:27:30,686 - app.services.couses_service - INFO - Fetching all courses
+2025-01-30 22:27:30,687 - app.services.couses_service - INFO - Fetched 2 courses
+2025-01-30 22:27:30,688 - app.services.couses_service - INFO - Fetched 2 courses
+2025-01-30 22:27:52,603 - app.services.batch_services - INFO - Attempting to create a new batch with data: {'name': '25TVMB05', 'start_date': '2025-01-04', 'end_date': '2025-01-31', 'trainer_id': '2', 'course_id': '2'}
+2025-01-30 22:27:52,616 - app.services.batch_services - INFO - Batch created successfully with ID: 6
+2025-01-30 22:27:52,625 - app.services.batch_services - INFO - Fetching all batches
+2025-01-30 22:27:52,627 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-30 22:27:55,169 - app.services.batch_services - INFO - Fetching batch with ID: 6
+2025-01-30 22:27:55,189 - app.services.batch_services - INFO - Batch data to return: {'id': 6, 'name': '25TVMB05', 'start_date': datetime.date(2025, 1, 4), 'end_date': datetime.date(2025, 1, 31), 'student_count': 0, 'trainer': {'id': 2, 'name': 'aaa'}, 'topics': []}

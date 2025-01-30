@@ -153,6 +153,48 @@ def delete_user(user_id):
     """
     return user_service.delete_user(user_id)
 
+@auth_routes.route('/users/count', methods=['GET'])
+def get_trainers_count():
+    """
+    Delete User by ID
+    ---
+    tags:
+      - Users
+    parameters:
+      - name: user_id
+        in: path
+        required: true
+        type: integer
+        example: 1
+    responses:
+      200:
+        description: User deleted successfully
+      404:
+        description: User not found
+    """
+    return user_service.get_trainers_count()
+
+@auth_routes.route('/users/trainers', methods=['GET'])
+def get_trainers():
+    """
+    Delete User by ID
+    ---
+    tags:
+      - Users
+    parameters:
+      - name: user_id
+        in: path
+        required: true
+        type: integer
+        example: 1
+    responses:
+      200:
+        description: User deleted successfully
+      404:
+        description: User not found
+    """
+    return user_service.get_trainers()
+
 @auth_routes.route('/login', methods=['POST'])
 def login():
     """

@@ -39,13 +39,14 @@ class StudentService:
         try:
             logger.info("Fetching all students")
             students = Students.query.all()
+            total_students = len(students)  # Get the total count of students
             student_list = [
                 {"id": student.id, "name": student.name, "email": student.email, "phone": student.phone,
                  "profile_picture": student.profile_picture}
                 for student in students
             ]
-            logger.info("Fetched %d students", len(student_list))
-            return jsonify(student_list), 200
+            logger.info("Fetched %d students", total_students)
+            return jsonify({"total_students": total_students, "students": student_list}), 200
         except Exception as e:
             logger.error("Error fetching students: %s", str(e), exc_info=True)
             return jsonify({"error": str(e)}), 400

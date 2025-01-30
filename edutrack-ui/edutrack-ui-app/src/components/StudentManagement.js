@@ -15,7 +15,7 @@ const StudentManagement = () => {
 
     const fetchStudents = async () => {
         const data = await getStudents();
-        setStudents(data);
+        setStudents(data.students);
     };
 
     const handleCreateOrUpdate = async (data) => {

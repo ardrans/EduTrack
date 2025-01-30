@@ -100,3 +100,11 @@ export const deleteStudent = async (id) => {
     });
     return response.data;
 };
+
+export const getTrainersCount = async () => {
+    const token = localStorage.getItem('token');
+    const response = await axios.get(`${API_URL}/auth/users/count`, {
+        headers: { Authorization: `Bearer ${token}` },
+    });
+    return response.data;
+};
