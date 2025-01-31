@@ -65,6 +65,7 @@ function Dashboard() {
               <Link to="/studentmanagement" style={{ color: '#fff', textDecoration: 'none', margin: '10px 0', display: 'block' }}>Student Management</Link>
               <Link to="/batchmanagement" style={{ color: '#fff', textDecoration: 'none', margin: '10px 0', display: 'block' }}>Batch Management</Link>
               <Link to="/coursemanagement" style={{ color: '#fff', textDecoration: 'none', margin: '10px 0', display: 'block' }}>Course Management</Link>
+              <Link to="/topicmanagement" style={{ color: '#fff', textDecoration: 'none', margin: '10px 0', display: 'block' }}>Topic Management</Link>
               <Link to="/addrole" style={{ color: '#fff', textDecoration: 'none', margin: '10px 0', display: 'block' }}>Add Role</Link>
               <Link to="/register" style={{ color: '#fff', textDecoration: 'none', margin: '10px 0', display: 'block' }}>Register</Link>
             </>

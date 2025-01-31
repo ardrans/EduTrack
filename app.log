@@ -1709,3 +1709,193 @@ AttributeError: user
 2025-01-30 22:27:52,627 - app.services.batch_services - INFO - Fetched 5 batches
 2025-01-30 22:27:55,169 - app.services.batch_services - INFO - Fetching batch with ID: 6
 2025-01-30 22:27:55,189 - app.services.batch_services - INFO - Batch data to return: {'id': 6, 'name': '25TVMB05', 'start_date': datetime.date(2025, 1, 4), 'end_date': datetime.date(2025, 1, 31), 'student_count': 0, 'trainer': {'id': 2, 'name': 'aaa'}, 'topics': []}
+2025-01-31 20:18:23,952 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 20:18:23,955 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 20:19:34,063 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-31 20:19:34,262 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-31 20:19:34,298 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 20:19:34,320 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 20:19:34,325 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 20:19:34,327 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 20:19:34,328 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 20:19:34,333 - app.services.student_services - INFO - Fetching all students
+2025-01-31 20:19:34,337 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 20:19:34,338 - app.services.student_services - INFO - Fetching all students
+2025-01-31 20:19:34,339 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 20:19:34,349 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 20:19:34,349 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 20:19:34,353 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 20:19:34,354 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:31:18,634 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:31:18,637 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:31:29,558 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-01-31 21:31:29,757 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-01-31 21:31:29,791 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:31:29,820 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:31:29,827 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:31:29,831 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:31:29,833 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:31:29,836 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:31:29,838 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:31:29,840 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:31:29,841 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:31:29,844 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:31:29,844 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:31:29,845 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:31:29,845 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:31:32,685 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:31:32,685 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:31:32,712 - app.services.topic_services - INFO - Fetched 0 topics
+2025-01-31 21:31:32,712 - app.services.topic_services - INFO - Fetched 0 topics
+2025-01-31 21:31:46,517 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:31:46,522 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:31:46,540 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:31:46,541 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:31:46,543 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:31:46,544 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:31:46,559 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:31:46,559 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:31:46,561 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:31:46,562 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:31:46,567 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:31:46,567 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:31:46,568 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:31:46,568 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:31:48,555 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:31:48,556 - app.services.topic_services - INFO - Fetched 0 topics
+2025-01-31 21:31:48,564 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:31:48,566 - app.services.topic_services - INFO - Fetched 0 topics
+2025-01-31 21:42:49,131 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:42:49,144 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:42:49,155 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:42:49,156 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:42:49,159 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:42:49,161 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:42:49,167 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:42:49,168 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:42:49,168 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:42:49,169 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:42:49,174 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:42:49,176 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:42:49,180 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:42:49,181 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:42:51,090 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:42:51,092 - app.services.topic_services - ERROR - Error fetching topics: 'Topics' object has no attribute 'title'
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/topic_services.py", line 42, in get_topics
+    {"id": topic.id, "title": topic.title, "content": topic.content, "course_id": topic.course_id}
+                              ^^^^^^^^^^^
+AttributeError: 'Topics' object has no attribute 'title'
+2025-01-31 21:42:51,110 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:42:51,112 - app.services.topic_services - ERROR - Error fetching topics: 'Topics' object has no attribute 'title'
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/topic_services.py", line 42, in get_topics
+    {"id": topic.id, "title": topic.title, "content": topic.content, "course_id": topic.course_id}
+                              ^^^^^^^^^^^
+AttributeError: 'Topics' object has no attribute 'title'
+2025-01-31 21:43:00,712 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:43:00,721 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:43:00,736 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:43:00,738 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:43:00,743 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:43:00,746 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:43:00,746 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:43:00,747 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:43:00,750 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:43:00,751 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:43:00,753 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:43:00,753 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:43:00,754 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:43:00,755 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:43:04,424 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:43:04,425 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:43:04,426 - app.services.topic_services - ERROR - Error fetching topics: 'Topics' object has no attribute 'title'
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/topic_services.py", line 42, in get_topics
+    {"id": topic.id, "title": topic.title, "content": topic.content, "course_id": topic.course_id}
+                              ^^^^^^^^^^^
+AttributeError: 'Topics' object has no attribute 'title'
+2025-01-31 21:43:04,427 - app.services.topic_services - ERROR - Error fetching topics: 'Topics' object has no attribute 'title'
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/topic_services.py", line 42, in get_topics
+    {"id": topic.id, "title": topic.title, "content": topic.content, "course_id": topic.course_id}
+                              ^^^^^^^^^^^
+AttributeError: 'Topics' object has no attribute 'title'
+2025-01-31 21:53:15,767 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:53:15,772 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:53:15,791 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:53:15,794 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:53:15,796 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:53:15,797 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:53:15,799 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:53:15,800 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:53:15,801 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:53:15,802 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:53:15,806 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:53:15,807 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:53:15,807 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:53:15,807 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:53:17,879 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:53:17,879 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:53:17,882 - app.services.topic_services - INFO - Fetched 1 topics
+2025-01-31 21:53:17,882 - app.services.topic_services - INFO - Fetched 1 topics
+2025-01-31 21:54:34,593 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:54:34,603 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:54:34,621 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:54:34,622 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:54:34,624 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:54:34,624 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:54:34,634 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:54:34,635 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:54:34,636 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:54:34,637 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:54:34,644 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:54:34,644 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:54:34,645 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:54:34,645 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:55:29,700 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:55:29,701 - app.services.topic_services - INFO - Fetched 1 topics
+2025-01-31 21:55:29,703 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:55:29,704 - app.services.topic_services - INFO - Fetched 1 topics
+2025-01-31 21:55:37,993 - app.services.topic_services - INFO - Fetching topic with ID: 1
+2025-01-31 21:55:37,999 - app.services.topic_services - INFO - Fetched topic: 1
+2025-01-31 21:55:37,999 - app.services.topic_services - ERROR - Error fetching topic with ID 1: 'Topics' object has no attribute 'title'
+Traceback (most recent call last):
+  File "/Users/ardrans/PycharmProjects/EduTrack/app/services/topic_services.py", line 60, in get_topic
+    "name": topic.title,
+            ^^^^^^^^^^^
+AttributeError: 'Topics' object has no attribute 'title'
+2025-01-31 21:55:40,061 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:55:40,065 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:55:40,070 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:55:40,077 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:55:40,082 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:55:40,083 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:55:40,086 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:55:40,087 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:55:40,092 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:55:40,094 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:55:40,095 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:55:40,095 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:55:42,164 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:55:42,176 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-01-31 21:55:42,184 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:55:42,187 - app.services.auth_services - INFO - Fetching count of trainers
+2025-01-31 21:55:42,189 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:55:42,190 - app.services.auth_services - INFO - Total trainers: 2
+2025-01-31 21:55:42,194 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:55:42,195 - app.services.student_services - INFO - Fetching all students
+2025-01-31 21:55:42,196 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:55:42,197 - app.services.student_services - INFO - Fetched 1 students
+2025-01-31 21:55:42,200 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:55:42,200 - app.services.batch_services - INFO - Fetching all batches
+2025-01-31 21:55:42,201 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:55:42,201 - app.services.batch_services - INFO - Fetched 5 batches
+2025-01-31 21:55:43,278 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:55:43,279 - app.services.topic_services - INFO - Fetched 1 topics
+2025-01-31 21:55:43,284 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:55:43,285 - app.services.topic_services - INFO - Fetched 1 topics
+2025-01-31 21:55:57,942 - app.services.topic_services - INFO - Attempting to create a new topic with data: {'name': 'jjj', 'description': 'dsfdv', 'course_id': '1'}
+2025-01-31 21:55:57,973 - app.services.topic_services - INFO - Topic created successfully with ID: 2
+2025-01-31 21:55:57,981 - app.services.topic_services - INFO - Fetching all topics
+2025-01-31 21:55:57,983 - app.services.topic_services - INFO - Fetched 2 topics

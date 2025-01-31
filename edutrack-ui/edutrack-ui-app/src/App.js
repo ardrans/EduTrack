@@ -8,6 +8,7 @@ import StudentManagement from "./components/StudentManagement";
 import AuthContext from "./components/AuthContext";
 import BatchManagement from "./components/BatchManagement";
 import CourseManagement from "./components/CourseManagement";
+import TopicManagement from "./components/TopicManagement";
 
 const App = () => {
   const [user, setUser] = useState(null); // To store user info including role
@@ -95,6 +96,8 @@ const App = () => {
               <Route path="/studentmanagement" element={<StudentManagement />} />
               <Route path="/batchmanagement" element={<BatchManagement />} />
               <Route path="/coursemanagement" element={<CourseManagement />} />
+              <Route path="/topicmanagement" element={<TopicManagement />} />
+
 
 
               <Route path="*" element={<Navigate to="/dashboard" />} />

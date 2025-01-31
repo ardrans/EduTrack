@@ -14,8 +14,8 @@ class TopicService:
         try:
             logger.info("Attempting to create a new topic with data: %s", data)
             new_topic = Topics(
-                title=data.get('title'),
-                content=data.get('content', None),
+                name=data.get('name'),
+                description=data.get('description', None),
                 course_id=data.get('course_id')
             )
             db.session.add(new_topic)
@@ -23,8 +23,8 @@ class TopicService:
             logger.info("Topic created successfully with ID: %s", new_topic.id)
             return jsonify({"message": "Topic created successfully", "topic": {
                 "id": new_topic.id,
-                "title": new_topic.title,
-                "content": new_topic.content,
+                "name": new_topic.name,
+                "description": new_topic.description,
                 "course_id": new_topic.course_id
             }}), 201
         except Exception as e:
@@ -39,7 +39,7 @@ class TopicService:
             logger.info("Fetching all topics")
             topics = Topics.query.all()
             topic_list = [
-                {"id": topic.id, "title": topic.title, "content": topic.content, "course_id": topic.course_id}
+                {"id": topic.id, "name": topic.name, "description": topic.description, "course_id": topic.course_id}
                 for topic in topics
             ]
             logger.info("Fetched %d topics", len(topic_list))
@@ -57,8 +57,8 @@ class TopicService:
             logger.info("Fetched topic: %s", topic_id)
             return jsonify({
                 "id": topic.id,
-                "title": topic.title,
-                "content": topic.content,
+                "name": topic.title,
+                "description": topic.description,
                 "course_id": topic.course_id
             }), 200
         except Exception as e:
@@ -71,8 +71,8 @@ class TopicService:
         topic = Topics.query.get_or_404(topic_id)
         try:
             logger.info("Updating topic with ID: %s with data: %s", topic_id, data)
-            topic.title = data.get('title', topic.title)
-            topic.content = data.get('content', topic.content)
+            topic.title = data.get('name', topic.name)
+            topic.content = data.get('description', topic.description)
             topic.course_id = data.get('course_id', topic.course_id)
             db.session.commit()
             logger.info("Topic updated successfully with ID: %s", topic_id)
