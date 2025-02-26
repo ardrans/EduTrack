@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { getBatches, createBatch, updateBatch, deleteBatch, getBatch } from './BatchService';
 import BatchForm from './BatchForm';
 import BatchList from './BatchList';
-import { Container, Button, Card } from 'react-bootstrap';
+import { Container, Button, Card, Modal } from 'react-bootstrap';
 
 const BatchManagement = () => {
     const [batches, setBatches] = useState([]);
     const [editingBatch, setEditingBatch] = useState(null);
     const [showForm, setShowForm] = useState(false);
-    const [batchDetails, setBatchDetails] = useState(null);  // For displaying detailed info
+    const [batchDetails, setBatchDetails] = useState(null);
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         fetchBatches();
@@ -47,8 +48,8 @@ const BatchManagement = () => {
 
     const handleViewDetails = async (batchId) => {
         const data = await getBatch(batchId);
-        console.log(data);
         setBatchDetails(data);
+        setShowModal(true);
     };
 
     return (
@@ -79,32 +80,38 @@ const BatchManagement = () => {
                             batches={batches}
                             onEdit={handleEdit}
                             onDelete={handleDelete}
-                            onViewDetails={handleViewDetails}  // Added handler to view details
+                            onViewDetails={handleViewDetails}
                         />
                     </Card>
                 </div>
             )}
-            
-            {/* Display batch details if available */}
-            {batchDetails && (
-    <Card className="mt-4" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', borderRadius: '10px' }}>
-        <Card.Body>
-            <h3>Batch Details</h3>
-            <p><strong>Name:</strong> {batchDetails.name}</p>
-            <p><strong>Start Date:</strong> {new Date(batchDetails.start_date).toLocaleDateString()}</p>
-            <p><strong>End Date:</strong> {new Date(batchDetails.end_date).toLocaleDateString()}</p>
-            <p><strong>Student Count:</strong> {batchDetails.student_count}</p>
-            <p><strong>Trainer:</strong> {batchDetails.trainer ? batchDetails.trainer.name : 'Not assigned'}</p>
-            <h5>Topics:</h5>
-            <ul>
-                {batchDetails.topics && batchDetails.topics.map((topic, index) => (
-                    <li key={index}>{topic.name}</li>
-                ))}
-            </ul>
-        </Card.Body>
-    </Card>
-)}
 
+            {/* Batch Details Modal */}
+            <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+                <Modal.Header closeButton>
+                    <Modal.Title>Batch Details</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    {batchDetails && (
+                        <>
+                            <p><strong>Name:</strong> {batchDetails.name}</p>
+                            <p><strong>Start Date:</strong> {new Date(batchDetails.start_date).toLocaleDateString()}</p>
+                            <p><strong>End Date:</strong> {new Date(batchDetails.end_date).toLocaleDateString()}</p>
+                            <p><strong>Student Count:</strong> {batchDetails.student_count}</p>
+                            <p><strong>Trainer:</strong> {batchDetails.trainer ? batchDetails.trainer.name : 'Not assigned'}</p>
+                            <h5>Topics:</h5>
+                            <ul>
+                                {batchDetails.topics && batchDetails.topics.map((topic, index) => (
+                                    <li key={index}>{topic.name}</li>
+                                ))}
+                            </ul>
+                        </>
+                    )}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowModal(false)}>Close</Button>
+                </Modal.Footer>
+            </Modal>
         </Container>
     );
 };

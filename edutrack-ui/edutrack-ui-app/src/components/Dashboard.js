@@ -68,6 +68,8 @@ function Dashboard() {
               <Link to="/batchmanagement" style={{ color: '#fff', textDecoration: 'none', margin: '10px 0', display: 'block' }}>Batch Management</Link>
               <Link to="/coursemanagement" style={{ color: '#fff', textDecoration: 'none', margin: '10px 0', display: 'block' }}>Course Management</Link>
               <Link to="/topicmanagement" style={{ color: '#fff', textDecoration: 'none', margin: '10px 0', display: 'block' }}>Topic Management</Link>
+              <Link to="/batchallocation" style={{ color: '#fff', textDecoration: 'none', margin: '10px 0', display: 'block' }}>Batch Allocation</Link>
+
             </>
           )}
           <Link to="/dashboard" style={{ color: '#fff', textDecoration: 'none', margin: '10px 0', display: 'block' }}>Dashboard</Link>
