@@ -2433,3 +2433,132 @@ AttributeError: 'Topics' object has no attribute 'title'
 2025-02-26 17:53:29,434 - app.services.batch_services - INFO - Fetched 5 batches
 2025-02-26 17:53:29,436 - app.services.batch_services - INFO - Fetching all batches
 2025-02-26 17:53:29,437 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 11:37:22,992 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-02-27 11:37:22,994 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-02-27 11:37:40,137 - app.services.auth_services - INFO - Attempting to log in user with email: nsardra@hrmail.com
+2025-02-27 11:37:40,357 - app.services.auth_services - INFO - User logged in successfully: <Users 3>
+2025-02-27 11:37:40,405 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-02-27 11:37:40,425 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 11:37:40,431 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 11:37:40,435 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 11:37:40,437 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 11:37:40,440 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:37:40,452 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:37:40,452 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:37:40,454 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:37:40,462 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 11:37:40,465 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 11:37:40,470 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 11:37:40,471 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 11:41:30,941 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:41:30,944 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:41:30,952 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:41:30,954 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:48:25,836 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 11:48:25,841 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 11:48:25,846 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 11:48:25,848 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 11:48:25,850 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:48:25,852 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:48:25,854 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:48:25,854 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:48:25,858 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 11:48:25,859 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 11:48:25,861 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 11:48:25,862 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 11:48:31,070 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:48:31,071 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:48:31,072 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:48:31,072 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:48:35,649 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-02-27 11:48:35,658 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-02-27 11:48:35,681 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 11:48:35,682 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 11:48:35,685 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 11:48:35,685 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 11:48:35,691 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:48:35,691 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:48:35,692 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:48:35,693 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:48:35,699 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 11:48:35,700 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 11:48:35,702 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 11:48:35,702 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 11:48:40,321 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:48:40,322 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:48:40,323 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:48:40,323 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:48:52,427 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 11:48:52,430 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 11:48:52,433 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 11:48:52,438 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 11:48:52,441 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:48:52,443 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:48:52,448 - app.services.student_services - INFO - Fetching all students
+2025-02-27 11:48:52,449 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 11:48:52,457 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 11:48:52,459 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 11:48:52,460 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 11:48:52,461 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 12:15:11,735 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-02-27 12:15:11,741 - app.services.auth_services - INFO - Fetching logged-in user's role
+2025-02-27 12:15:11,762 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 12:15:11,769 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 12:15:11,773 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 12:15:11,775 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 12:15:11,781 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:15:11,785 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 12:15:11,789 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:15:11,789 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 12:15:11,794 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 12:15:11,794 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 12:15:11,795 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 12:15:11,795 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 12:15:15,783 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:15:15,786 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 12:15:15,799 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:15:15,801 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 12:18:48,023 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 12:18:48,030 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 12:18:48,037 - app.services.auth_services - INFO - Fetching count of trainers
+2025-02-27 12:18:48,041 - app.services.auth_services - INFO - Total trainers: 2
+2025-02-27 12:18:48,044 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:18:48,047 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 12:18:48,055 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:18:48,056 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 12:18:48,064 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 12:18:48,065 - app.services.batch_services - INFO - Fetching all batches
+2025-02-27 12:18:48,065 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 12:18:48,066 - app.services.batch_services - INFO - Fetched 5 batches
+2025-02-27 12:18:50,131 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:18:50,133 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 12:18:50,137 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:18:50,138 - app.services.student_services - INFO - Fetched 2 students
+2025-02-27 12:19:11,142 - app.services.student_services - INFO - Attempting to create a new student with data: {'name': 'afwae', 'email': 'nsardrhhha@gmail.com', 'phone': '4444444', 'profile_picture': ''}
+2025-02-27 12:19:11,167 - app.services.student_services - INFO - Student created successfully with ID: 7
+2025-02-27 12:19:11,178 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:19:11,180 - app.services.student_services - INFO - Fetched 3 students
+2025-02-27 12:19:17,595 - app.services.student_services - INFO - Updating student with ID: 7 with data: {'placed': True}
+2025-02-27 12:19:17,606 - app.services.student_services - INFO - Student updated successfully with ID: 7
+2025-02-27 12:19:17,624 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:19:17,627 - app.services.student_services - INFO - Fetched 3 students
+2025-02-27 12:19:18,994 - app.services.student_services - INFO - Updating student with ID: 7 with data: {'placed': False}
+2025-02-27 12:19:18,998 - app.services.student_services - INFO - Student updated successfully with ID: 7
+2025-02-27 12:19:19,003 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:19:19,004 - app.services.student_services - INFO - Fetched 3 students
+2025-02-27 12:19:58,349 - app.services.student_services - INFO - Updating student with ID: 7 with data: {'placed': True}
+2025-02-27 12:19:58,357 - app.services.student_services - INFO - Student updated successfully with ID: 7
+2025-02-27 12:19:58,371 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:19:58,372 - app.services.student_services - INFO - Fetched 3 students
+2025-02-27 12:20:09,707 - app.services.student_services - INFO - Updating student with ID: 7 with data: {'placed': False}
+2025-02-27 12:20:09,712 - app.services.student_services - INFO - Student updated successfully with ID: 7
+2025-02-27 12:20:09,727 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:20:09,729 - app.services.student_services - INFO - Fetched 3 students
+2025-02-27 12:23:30,251 - app.services.student_services - INFO - Updating student with ID: 7 with data: {'placed': True}
+2025-02-27 12:23:30,263 - app.services.student_services - INFO - Student updated successfully with ID: 7
+2025-02-27 12:23:30,284 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:23:30,290 - app.services.student_services - INFO - Fetched 3 students
+2025-02-27 12:23:34,272 - app.services.student_services - INFO - Updating student with ID: 7 with data: {'placed': False}
+2025-02-27 12:23:34,277 - app.services.student_services - INFO - Student updated successfully with ID: 7
+2025-02-27 12:23:34,289 - app.services.student_services - INFO - Fetching all students
+2025-02-27 12:23:34,291 - app.services.student_services - INFO - Fetched 3 students

@@ -17,22 +17,28 @@ class StudentService:
                 name=data.get('name'),
                 email=data.get('email'),
                 phone=data.get('phone'),
-                profile_picture=data.get('profile_picture', None)  # Optional
+                profile_picture=data.get('profile_picture', None),  # Optional
+                placed=data.get('placed', False)  # Include placed field
             )
             db.session.add(new_student)
             db.session.commit()
             logger.info("Student created successfully with ID: %s", new_student.id)
-            return jsonify({"message": "Student created successfully", "student": {
-                "id": new_student.id,
-                "name": new_student.name,
-                "email": new_student.email,
-                "phone": new_student.phone,
-                "profile_picture": new_student.profile_picture
-            }}), 201
+            return jsonify({
+                "message": "Student created successfully",
+                "student": {
+                    "id": new_student.id,
+                    "name": new_student.name,
+                    "email": new_student.email,
+                    "phone": new_student.phone,
+                    "profile_picture": new_student.profile_picture,
+                    "placed": new_student.placed  # ✅ Include placed field
+                }
+            }), 201
         except Exception as e:
             logger.error("Error creating student: %s", str(e), exc_info=True)
             db.session.rollback()
             return jsonify({"error": str(e)}), 400
+
     @staticmethod
     @token_required
     def get_students():
@@ -41,8 +47,14 @@ class StudentService:
             students = Students.query.all()
             total_students = len(students)  # Get the total count of students
             student_list = [
-                {"id": student.id, "name": student.name, "email": student.email, "phone": student.phone,
-                 "profile_picture": student.profile_picture}
+                {
+                    "id": student.id,
+                    "name": student.name,
+                    "email": student.email,
+                    "phone": student.phone,
+                    "profile_picture": student.profile_picture,
+                    "placed": student.placed  # ✅ Include placed field
+                }
                 for student in students
             ]
             logger.info("Fetched %d students", total_students)
@@ -62,7 +74,8 @@ class StudentService:
                 "name": student.name,
                 "email": student.email,
                 "phone": student.phone,
-                "profile_picture": student.profile_picture
+                "profile_picture": student.profile_picture,
+                "placed": student.placed  # ✅ Include placed field
             }), 200
         except Exception as e:
             logger.error("Error fetching student with ID %s: %s", student_id, str(e), exc_info=True)
@@ -78,6 +91,7 @@ class StudentService:
             student.email = data.get('email', student.email)
             student.phone = data.get('phone', student.phone)
             student.profile_picture = data.get('profile_picture', student.profile_picture)
+            student.placed = data.get('placed', student.placed)  # ✅ Allow updating placed field
             db.session.commit()
             logger.info("Student updated successfully with ID: %s", student_id)
             return jsonify({"message": "Student updated successfully"}), 200

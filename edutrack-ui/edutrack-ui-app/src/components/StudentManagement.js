@@ -7,7 +7,7 @@ import { Container, Button, Card } from 'react-bootstrap';
 const StudentManagement = () => {
     const [students, setStudents] = useState([]);
     const [editingStudent, setEditingStudent] = useState(null);
-    const [showForm, setShowForm] = useState(false); // State to toggle form view
+    const [showForm, setShowForm] = useState(false);
 
     useEffect(() => {
         fetchStudents();
@@ -19,14 +19,14 @@ const StudentManagement = () => {
     };
 
     const handleCreateOrUpdate = async (data) => {
-        console.log("Submitting data:", data); // Log form data
+        console.log("Submitting data:", data);
         if (editingStudent) {
             await updateStudent(editingStudent.id, data);
         } else {
             await createStudent(data);
         }
         setEditingStudent(null);
-        setShowForm(false); // Return to list view
+        setShowForm(false);
         fetchStudents();
     };
 
@@ -37,12 +37,21 @@ const StudentManagement = () => {
 
     const handleEdit = (student) => {
         setEditingStudent(student);
-        setShowForm(true); // Show form for editing
+        setShowForm(true);
     };
 
     const handleAddNew = () => {
-        setEditingStudent(null); // Reset editing state
-        setShowForm(true); // Show form for adding
+        setEditingStudent(null);
+        setShowForm(true);
+    };
+
+    // **Handle "Placed" checkbox toggle**
+    const handleTogglePlaced = async (id) => {
+        const student = students.find((s) => s.id === id);
+        if (student) {
+            await updateStudent(id, { placed: !student.placed }); // Toggle the "placed" status
+            fetchStudents(); // Refresh student list
+        }
     };
 
     return (
@@ -73,6 +82,7 @@ const StudentManagement = () => {
                             students={students}
                             onEdit={handleEdit}
                             onDelete={handleDelete}
+                            onTogglePlaced={handleTogglePlaced} // Pass the function to StudentList
                         />
                     </Card>
                 </div>
